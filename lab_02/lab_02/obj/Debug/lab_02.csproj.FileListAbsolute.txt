@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\obj\Debug\lab_02.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\obj\Debug\lab_02.Form1.resources
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\obj\Debug\lab_02.Properties.Resources.resources
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\obj\Debug\lab_02.csproj.GenerateResource.cache
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\obj\Debug\lab_02.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\bin\Debug\lab_02.exe.config
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\bin\Debug\lab_02.exe
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\bin\Debug\lab_02.pdb
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\obj\Debug\lab_02.exe
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\obj\Debug\lab_02.pdb
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\bin\Debug\MathNet.Numerics.dll
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\bin\Debug\System.ValueTuple.dll
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\bin\Debug\MathNet.Numerics.xml
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\bin\Debug\System.ValueTuple.xml
+C:\Users\User\Desktop\учеба\бауманка\4-сем\Вычислительные алгоритмы\lab_02\lab_02\obj\Debug\lab_02.csproj.CopyComplete
