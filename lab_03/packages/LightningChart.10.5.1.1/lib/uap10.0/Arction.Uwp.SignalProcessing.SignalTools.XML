@@ -1,0 +1,1754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Arction.Uwp.SignalProcessing.SignalTools</name>
+  </assembly>
+  <members>
+    <member name="T:Arction.Uwp.SignalProcessing.Action">
+      <summary>
+            A multi-purpose delegate to use when you need neither parameters nor a return value.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs">
+      <summary>
+            Represents a AmplitudeSineSweepChangedEventArgs object.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)">
+      <summary>
+            Creates and initializes a new instance of this class.
+            </summary>
+      <param name="amplitudeFrom">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitudeFrom</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="amplitudeTo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitudeTo</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="durationMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>durationMs</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.AmplitudeFrom">
+      <summary>
+            Beginning of the amplitude range.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.AmplitudeTo">
+      <summary>
+            End of the amplitude range.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.DurationMs">
+      <summary>
+            Duration in milliseconds.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Frequency">
+      <summary>
+            Frequency.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent">
+      <summary>
+            Sine amplitude sweep waveform component. Runs with constant frequency, from amplitude to another, during given duration.
+            Then jumps to start starting amplitude again. 
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.#ctor(Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.AmplitudeFrom">
+      <summary>
+            Starting amplitude of sine sweep
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.AmplitudeTo">
+      <summary>
+            End amplitude of sine sweep
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.CreateCopy">
+      <summary>
+            Create a copy of the amplitude sine sweep component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.DurationMs">
+      <summary>
+            Duration of sine sweep in ms. Runs from starting amplitude to end amplitude during this duration. 
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.Enabled">
+      <summary>
+            Is the sweep component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.Frequency">
+      <summary>
+            Frequency of sine sweep.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.Offset">
+      <summary>
+            Offset of sine sweep
+            </summary>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.AmplitudeSineSweepComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.ChangedEventHandler">
+      <summary>
+            Occures when property is changed.
+            </summary>
+      <param name="sender"></param>
+      <param name="args"></param>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.DataGeneratedEventArgs">
+      <summary>
+            Represents a DataGeneratedEventArgs object.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.Uwp.SignalProcessing.DataGeneratedStatus)">
+      <summary>
+            Constructor. Creates and initializes a new instance of this class.
+            </summary>
+      <param name="samples">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>samples</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.Uwp.SignalProcessing.DataGeneratedStatus)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="firstSampleTimeStamp">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>firstSampleTimeStamp</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.Uwp.SignalProcessing.DataGeneratedStatus)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="status">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>status</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.Uwp.SignalProcessing.DataGeneratedStatus)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.DataGeneratedEventArgs.FirstSampleTimeStamp">
+      <summary>
+            Timestamp when a first sample occured.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.DataGeneratedEventArgs.Samples">
+      <summary>
+            Array of samples.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.DataGeneratedEventArgs.Status">
+      <summary>
+            Status of generated data.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.DataGeneratedEventHandler">
+      <summary>
+            Data generation event.
+            </summary>
+      <param name="args"></param>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.DataGeneratedStatus">
+      <summary>
+            Enumeration of data generated statuses.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.DataGeneratedStatus.Ok">
+      <summary>
+            Format is valid.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.DataGeneratedStatus.UnknownError">
+      <summary>
+            Format is invalid.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs">
+      <summary>
+            Represents a FrequencySineSweepChangedEventArgs object.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)">
+      <summary>
+            Constructor. Creates and initializes a new instance of this class.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequencyFrom">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequencyFrom</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequencyTo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequencyTo</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="durationMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>durationMs</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.DurationMs">
+      <summary>
+            Duration.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.FrequencyFrom">
+      <summary>
+            Beginning of the frequency range.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.FrequencyTo">
+      <summary>
+            End of the frequency range.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.FrequencySineSweepChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent">
+      <summary>
+            Sine frequency sweep waveform component. Runs with constant amplitude, from frequency to another, during given duration.
+            Then jumps to start starting frequency again. 
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.#ctor(Arction.Uwp.SignalProcessing.FrequencySineSweepComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.Amplitude">
+      <summary>
+            Amplitude of sine sweep
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.CreateCopy">
+      <summary>
+            Create a copy of frequency sine sweep component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.DurationMs">
+      <summary>
+            Duration of sine sweep in ms. Runs from starting frequency to end frequency during this duration. 
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.Enabled">
+      <summary>
+            Is the sweep component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.FrequencyFrom">
+      <summary>
+            Start frequency of sine sweep.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.FrequencyTo">
+      <summary>
+            End frequency of sine sweep.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.Offset">
+      <summary>
+            Offset of sine sweep
+            </summary>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.FrequencySineSweepComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.IDataSource">
+      <summary>
+            Data source interface.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.IDataSource.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)">
+      <summary>
+            Connect data source.
+            </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.IDataSource.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="dataGenerated">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dataGenerated</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.IDataSource.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="started">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>started</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.IDataSource.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="stopped">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>stopped</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.IDataSource.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.IDataSource.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.IDataSource.DataGenerated">
+      <summary>
+            Data generation event.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.IDataSource.Disconnect(System.Object)">
+      <summary>
+            Disconnect data source.
+            </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.IDataSource.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.IDataSource.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.IDataSource.Started">
+      <summary>
+            Start event.
+            </summary>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.IDataSource.Stopped">
+      <summary>
+            Stop event.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.IWaveFormComponent">
+      <summary>
+            Waveform component interface.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.IWaveFormComponent.CreateCopy">
+      <summary>
+            Create copy of object. Interface method.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.IWaveFormComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.IWaveFormComponent.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.IWaveFormComponent.PropertyChanged">
+      <summary>
+            Event. Occures when property is changed.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.RandomNoiseChangedEventArgs">
+      <summary>
+            Represents a RandomNoiseChangedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)">
+      <summary>
+            Creates and initializes a new instance of this class.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.RandomNoiseChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.RandomNoiseChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.RandomNoiseChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.RandomNoiseChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.RandomNoiseComponent">
+      <summary>
+            Random noise waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.RandomNoiseComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.RandomNoiseComponent.#ctor(Arction.Uwp.SignalProcessing.RandomNoiseComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.RandomNoiseComponent.Amplitude">
+      <summary>
+            Amplitude of random noise component. 
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.RandomNoiseComponent.CreateCopy">
+      <summary>
+            Create a copy of random noise component. 
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.RandomNoiseComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.RandomNoiseComponent.Enabled">
+      <summary>
+            Is the random noise component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.RandomNoiseComponent.GetRandomValue">
+      <summary>
+            Get random value, using offset and amplitude 
+            </summary>
+      <returns>Random value, in range -Amplitude+Offset ... +Amplitude+Offset</returns>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.RandomNoiseComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.RandomNoiseComponent.Offset">
+      <summary>
+            Offset of random noise component
+            </summary>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.RandomNoiseComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.RandomNoiseComponent.ToString">
+      <summary>
+            Convert class description to string.
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.SelectedPage">
+      <summary>
+            Active page that is shown in the UI
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SelectedPage.Sines">
+      <summary>
+            Sine waveforms
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SelectedPage.Squares">
+      <summary>
+            Squares
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SelectedPage.Triangles">
+      <summary>
+            Triangles
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SelectedPage.RandomNoises">
+      <summary>
+            Random noises
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SelectedPage.FrequencySineSweeps">
+      <summary>
+            Frequency sine sweeps
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SelectedPage.AmplitudeSineSweeps">
+      <summary>
+            Amplitude sine sweeps
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SelectedPage.All">
+      <summary>
+            All
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.SignalGenerator">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Uwp.SignalProcessing.SignalGenerator</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SignalGenerator.#ctor">
+      <summary>
+             Creates and initializes a new instance of SignalGenerator class.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="dataGenerated">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dataGenerated</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="started">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>started</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="stopped">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>stopped</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Uwp.SignalProcessing.DataGeneratedEventHandler,Arction.Uwp.SignalProcessing.StartedEventHandler,Arction.Uwp.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.SignalGenerator.DataGenerated">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Uwp.SignalProcessing.SignalGenerator.DataGenerated</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SignalGenerator.Disconnect(System.Object)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.Factor">
+      <summary>
+            Get or sets a general factor for output signal. Allows using e.g. millivolt range by setting this 0.001, or 1E-3. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.FactorProperty">
+      <summary>
+            Identifies the Factor dependency property.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SignalGenerator.Finalize">
+      <summary>
+            Finalizer.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SignalGenerator.GenerateBlock(System.Int32)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.GenerateBlock(System.Int32)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="sampleCount">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>sampleCount</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.GenerateBlock(System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.GenerateBlock(System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.GeneratorName">
+      <summary>
+            Gets or sets the name of this signal generator. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.GeneratorNameProperty">
+      <summary>
+            Identifies the GeneratorName dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.IsGeneratorEnabled">
+      <summary>
+            Gets or sets the state of this generator (enabled or not). This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.IsGeneratorEnabledProperty">
+      <summary>
+            Identifies the IsGeneratorEnabled dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.MasterGenerator">
+      <summary>
+            Master generator. Several generators can be combined together to produce a synchronized multi-channel output data stream. 
+            Master sets the sampling frequency for each slave generator and combines the samples from each slave to master's output data stream.
+            Set this null if this is a master generator. 
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.MasterGeneratorProperty">
+      <summary>
+            Identifies the MasterGenerator dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.MultiCoreProcessing">
+      <summary>
+            Gets or sets whether multi-core processing is enabled. If enabled, computes the signal in multiple threads. 
+            Enables faster rendering when CPU has more cores than 1. Only certain parts of chart are multicore optimized. 
+            This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.MultiCoreProcessingProperty">
+      <summary>
+            Identifies the MultiCoreProcessing dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.OutputInterval">
+      <summary>
+            Gets or sets the output interval of this generator in milliseconds. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.OutputIntervalProperty">
+      <summary>
+            Identifies the OutputIntervalMs dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.SamplingFrequency">
+      <summary>
+            Gets or sets the sampling frequency, i.e. the number of output points generated per second. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.SamplingFrequencyProperty">
+      <summary>
+            Identifies the SamplingFrequency dependency property.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SignalGenerator.SetDeploymentKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="deploymentKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>deploymentKey</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SignalGenerator.SetUwpDeveloperKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.SetUwpDeveloperKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="uwpdeveloperkey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>uwpdeveloperkey</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.SetUwpDeveloperKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SignalGenerator.Start">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.Start</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.SignalGenerator.Started">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Uwp.SignalProcessing.SignalGenerator.Started</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.SignalGenerator.Stopped">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Uwp.SignalProcessing.SignalGenerator.Stopped</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SignalGenerator.StopRequest">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SignalGenerator.StopRequest</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.ThreadInvoking">
+      <summary>
+            Built-in invoking to UI thread when using ThreadType = Thread. 
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.ThreadInvokingProperty">
+      <summary>
+            Identifies the ThreadInvoking dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.ThreadType">
+      <summary>
+            Gets or sets the way how data is generated. Generates data either by using a thread or a main UI thread synchronized timer.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.ThreadTypeProperty">
+      <summary>
+            Identifies the ThreadType dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformAmplitudeSweepSines">
+      <summary>
+            Get or sets sine sweep amplitude component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformAmplitudeSweepSinesProperty">
+      <summary>
+            Identifies the WaveformAmplitudeSweepSinesProperty dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformFrequencySweepSines">
+      <summary>
+            Get or sets sine sweep amplitude component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformFrequencySweepSinesProperty">
+      <summary>
+            Identifies the WaveformFrequencySweepSinesProperty dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformRandomNoises">
+      <summary>
+            Get or sets random noise waveform component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformRandomNoisesProperty">
+      <summary>
+            Identifies the WaveformRandomNoises dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformSines">
+      <summary>
+            Get or sets sine waveform component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformSinesProperty">
+      <summary>
+            Identifies the WaveformSines dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformSquares">
+      <summary>
+            Get or sets square waveform component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformSquaresProperty">
+      <summary>
+            Identifies the WaveformSquares dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformTriangles">
+      <summary>
+            Get or sets triangle waveform component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SignalGenerator.WaveformTrianglesProperty">
+      <summary>
+            Identifies the WaveformTriangles dependency property.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.SineChangedEventArgs">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Uwp.SignalProcessing.SineChangedEventArgs</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)">
+      <summary>
+            Occures when parameters is changed. Initializes a new instance of sine component.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="delayMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>delayMs</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SineChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SineChangedEventArgs.DelayMs">
+      <summary>
+            Delay in milliseconds.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SineChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SineChangedEventArgs.Frequency">
+      <summary>
+            Frequency.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SineChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SineChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.SineComponent">
+      <summary>
+            Sine waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SineComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SineComponent.#ctor(Arction.Uwp.SignalProcessing.SineComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SineComponent.Amplitude">
+      <summary>
+            Amplitude of sine component.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SineComponent.CreateCopy">
+      <summary>
+            Create a copy of sine component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SineComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SineComponent.DelayMs">
+      <summary>
+            Delay of sine component in ms.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SineComponent.Enabled">
+      <summary>
+            Is the sine component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SineComponent.Frequency">
+      <summary>
+            Frequency of sine component
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SineComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SineComponent.Offset">
+      <summary>
+            Offset of sine component
+            </summary>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.SineComponent.PropertyChanged">
+      <summary>
+            Event occures when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SineComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.SquareChangedEventArgs">
+      <summary>
+            Represents a SquareChangedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)">
+      <summary>
+            Occures when parameters is changed. Initializes a new instance of square waveform component.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="delayMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>delayMs</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="symmetry">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>symmetry</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.DelayMs">
+      <summary>
+            Delay in milliseconds.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.Frequency">
+      <summary>
+            Frequency.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.SquareChangedEventArgs.Symmetry">
+      <summary>
+            Symmetry.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.SquareComponent">
+      <summary>
+            Square waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SquareComponent.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.Uwp.SignalProcessing.SquareComponent</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SquareComponent.#ctor(Arction.Uwp.SignalProcessing.SquareComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SquareComponent.#ctor(Arction.Uwp.SignalProcessing.SquareComponent)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SquareComponent.Amplitude">
+      <summary>
+            Amplitude of square component.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SquareComponent.CreateCopy">
+      <summary>
+            Create a copy of square component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.SquareComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SquareComponent.DelayMs">
+      <summary>
+            Delay of square component in ms.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SquareComponent.Enabled">
+      <summary>
+            Is the square component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SquareComponent.Frequency">
+      <summary>
+            Frequency of square component
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SquareComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SquareComponent.Offset">
+      <summary>
+            Offset of square component
+            </summary>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.SquareComponent.PropertyChanged">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Uwp.SignalProcessing.SquareComponent.PropertyChanged</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.SquareComponent.Symmetry">
+      <summary>
+            Square wave symmetry. Valid range is 0...1.
+            If symmetry is &lt; 0.5, the 'low'stage of noise wave is longer than 'high' stage. 
+            Vice versa, value &gt; 0.5 makes the 'high' stage longer
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.SquareComponent.ToString">
+      <summary>
+            Convert class description to string.
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.StartedEventArgs">
+      <summary>
+            Represents a StartedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)">
+      <summary>
+            Event constructor. Creates and initializes a new instance of this event.
+            </summary>
+      <param name="samplesPerSecond">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>samplesPerSecond</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="bitsPerSample">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>bitsPerSample</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="channelCount">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>channelCount</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.StartedEventArgs.BitsPerSample">
+      <summary>
+            Read bits per sample.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.StartedEventArgs.ChannelCount">
+      <summary>
+            Channel counter.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.StartedEventArgs.SamplesPerSecond">
+      <summary>
+            Read samples per second.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.StartedEventHandler">
+      <summary>
+            Start event.
+            </summary>
+      <param name="args"></param>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.StoppedEventHandler">
+      <summary>
+            Stop event.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.ThreadType">
+      <summary>
+            Threading type
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.ThreadType.Thread">
+      <summary>
+            Use thread.
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.ThreadType.Timer">
+      <summary>
+            Use timer.
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs">
+      <summary>
+            Represents a TriangleChangedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)">
+      <summary>
+            Occures when parameters is changed. Initializes a new instance of triangle component
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="delayMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>delayMs</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="symmetry">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>symmetry</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.DelayMs">
+      <summary>
+            Delay in milliseconds
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.Frequency">
+      <summary>
+            Frequency
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.Id">
+      <summary>
+            Id
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.Offset">
+      <summary>
+            Offset
+            </summary>
+    </member>
+    <member name="F:Arction.Uwp.SignalProcessing.TriangleChangedEventArgs.Symmetry">
+      <summary>
+            Symmetry
+            </summary>
+    </member>
+    <member name="T:Arction.Uwp.SignalProcessing.TriangleComponent">
+      <summary>
+            Triangle waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.TriangleComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.TriangleComponent.#ctor(Arction.Uwp.SignalProcessing.TriangleComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.TriangleComponent.Amplitude">
+      <summary>
+            Amplitude of triangle component.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.TriangleComponent.CreateCopy">
+      <summary>
+            Create copy of triangle component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Uwp.SignalProcessing.TriangleComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.TriangleComponent.DelayMs">
+      <summary>
+            Delay of triangle component in ms.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.TriangleComponent.Enabled">
+      <summary>
+            Is the triangle component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.TriangleComponent.Frequency">
+      <summary>
+            Frequency of triangle component
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.TriangleComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.TriangleComponent.Offset">
+      <summary>
+            Offset of triangle component
+            </summary>
+    </member>
+    <member name="E:Arction.Uwp.SignalProcessing.TriangleComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="P:Arction.Uwp.SignalProcessing.TriangleComponent.Symmetry">
+      <summary>
+            Triangle wave symmetry. Valid range is 0...1.
+            </summary>
+    </member>
+    <member name="M:Arction.Uwp.SignalProcessing.TriangleComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+  </members>
+</doc>

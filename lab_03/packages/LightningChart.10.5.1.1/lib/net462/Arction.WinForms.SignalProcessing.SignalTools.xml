@@ -1,0 +1,2767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Arction.WinForms.SignalProcessing.SignalTools</name>
+  </assembly>
+  <members>
+    <member name="T:Arction.WinForms.SignalProcessing.Action">
+      <summary>
+            A multi-purpose delegate to use when you need neither parameters nor a return value.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs">
+      <summary>
+            Represents a AmplitudeSineSweepChangedEventArgs object.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)">
+      <summary>
+            Creates and initializes a new instance of this class.
+            </summary>
+      <param name="amplitudeFrom">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitudeFrom</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="amplitudeTo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitudeTo</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="durationMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>durationMs</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.AmplitudeFrom">
+      <summary>
+            Beginning of the amplitude range.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.AmplitudeTo">
+      <summary>
+            End of the amplitude range.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.DurationMs">
+      <summary>
+            Duration in milliseconds.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Frequency">
+      <summary>
+            Frequency.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent">
+      <summary>
+            Sine amplitude sweep waveform component. Runs with constant frequency, from amplitude to another, during given duration.
+            Then jumps to start starting amplitude again. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.#ctor(Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.AmplitudeFrom">
+      <summary>
+            Starting amplitude of sine sweep
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.AmplitudeTo">
+      <summary>
+            End amplitude of sine sweep
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.CreateCopy">
+      <summary>
+            Create a copy of the amplitude sine sweep component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.DurationMs">
+      <summary>
+            Duration of sine sweep in ms. Runs from starting amplitude to end amplitude during this duration. 
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.Enabled">
+      <summary>
+            Is the sweep component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.Frequency">
+      <summary>
+            Frequency of sine sweep.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.Offset">
+      <summary>
+            Offset of sine sweep
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AmplitudeSineSweepComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.AudioInput">
+      <summary>
+            Audio input class.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioInput.#ctor">
+      <summary>
+            Creates and initializes a new instance of AudioInput class.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioInput.BitsPerSample">
+      <summary>
+            Gets or sets how many bits are allocated per sample. 
+            Supported values are 8 and 16. If other value is used, 
+            16 is used instead. Is settable when IsInputEnabled is false.
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.AudioInput.DataGenerated">
+      <summary>
+            Occurs when new audio data has been generated.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioInput.Finalize">
+      <summary>
+            Audio input default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioInput.GetRecordingDevices">
+      <summary>
+            Use this static method to get a list of available Windows recording devices.
+            </summary>
+      <returns>List of available Windows recording devices as RecordingDeviceInfo objects.</returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioInput.IsInputEnabled">
+      <summary>
+            Gets or sets the state of this instance (i.e. starts or stops it). 
+            Setting this property true is the same as calling Start method where 
+            false is the same as calling Stop method.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioInput.IsStereo">
+      <summary>
+            Gets or sets whether to use two channels (stereo) or just one (mono). 
+            Is settable when IsInputEnabled is false.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioInput.RecordingDevice">
+      <summary>
+            Gets or sets the current recording device. Is settable when IsInputEnabled is false. 
+            By setting this property null, Windows' default recording device is used.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioInput.SamplesPerSecond">
+      <summary>
+            Gets or sets sampling frequency. Is settable when IsInputEnabled is false.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioInput.SetDeploymentKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AudioInput.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="deploymentKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>deploymentKey</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AudioInput.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioInput.Start">
+      <summary>
+            Starts this instance. Is equivalent to setting IsInputEnabled property true.
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.AudioInput.Started">
+      <summary>
+            Occurs when audio input has been started.
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.AudioInput.Stopped">
+      <summary>
+            Occurs when audio input has been stopped.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioInput.StopRequest">
+      <summary>
+            Signals this instance to stop. Stopping does not occur immediately 
+            after exiting this method. By subscribing to Stopped event, caller 
+            is notified when everything has stopped.  Is equivalent to setting 
+            IsInputEnabled property true.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioInput.ThreadInvoking">
+      <summary>
+            Gets or sets whether this instance automatically synchronizes its 
+            events to the main UI thread hence eliminating the need to call 
+            Control.Invoke method on caller's side.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioInput.Volume">
+      <summary>
+            Gets or sets volume (0-100). Is settable when IsInputEnabled is false.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.AudioInput.OnNewSamplesEventHandler">
+      <summary>
+            Occurs when new samples appear.
+            </summary>
+      <param name="samplesLeftRight"></param>
+      <param name="status"></param>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.AudioInput.OnNewSamplesStatus">
+      <summary>
+            Enumeration of statuses for a new sample.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.AudioInput.OnNewSamplesStatus.Ok">
+      <summary>
+            Status is valid.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.AudioInput.OnNewSamplesStatus.UnknownError">
+      <summary>
+            Status is invalid.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.AudioOutput">
+      <summary>
+            Audio output class
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioOutput.#ctor">
+      <summary>
+            Creates and initializes a new instance of AudioOutput class.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioOutput.AddSamples(System.Double[][])">
+      <summary>
+            Use this method to feed new data to audio output stream.
+            </summary>
+      <param name="samples">Samples to be fed to audio output stream ([Channel][Sample]).</param>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioOutput.Balance">
+      <summary>
+            Gets or sets audio playback balance. Valid values are between -100 to 100. 
+            -100 means that audio is played only through the left speaker. 0 means that 
+            both speakers output audio. 100 means that audio is played only through 
+            the right speaker.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioOutput.BitsPerSample">
+      <summary>
+            Gets or sets how many bits are allocated per sample. 
+            Supported values are 8 and 16. If other value is used, 
+            16 is used instead. Is settable when IsInputEnabled is false.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioOutput.Finalize">
+      <summary>
+            Finalizer.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioOutput.GetPlaybackDevices">
+      <summary>
+            Gets a list of available Windows playback devices as PlayBackDeviceInfo objects.
+            </summary>
+      <returns>List of PlaybackDeviceInfo objects.</returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioOutput.IsOutputEnabled">
+      <summary>
+            Gets or sets the state of this instance (i.e. starts or stops it). 
+            Setting this property true is the same as calling Start method where 
+            false is the same as calling Stop method.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioOutput.IsStereo">
+      <summary>
+            Gets or sets whether to use two channels (stereo) or just one (mono). 
+            Is settable when IsInputEnabled is false.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioOutput.PlaybackDevice">
+      <summary>
+            Gets or sets the current playback device. Is settable when IsInputEnabled is false. 
+            By setting this property null, Windows' default playback device is used.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioOutput.SamplesPerSecond">
+      <summary>
+            Gets or sets sampling frequency. Is settable when IsInputEnabled is false.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioOutput.SetDeploymentKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AudioOutput.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="deploymentKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>deploymentKey</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.AudioOutput.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioOutput.Start">
+      <summary>
+            Starts this instance. Is equivalent to setting IsOutput property true.
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.AudioOutput.Started">
+      <summary>
+            Occurs when audio playback has been started.
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.AudioOutput.Stopped">
+      <summary>
+            Occurs when audio playback has been stopped.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.AudioOutput.StopRequest">
+      <summary>
+            Signals this instance to stop. Stopping does not occur immediately 
+            after exiting this method. By subscribing to Stopped event, caller 
+            is notified when everything has stopped.  Is equivalent to setting 
+            IsOutputEnabled property true.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.AudioOutput.Volume">
+      <summary>
+            Gets or sets volume (0-100). Is settable when IsInputEnabled is false.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.ChangedEventHandler">
+      <summary>
+            Occures when property is changed.
+            </summary>
+      <param name="sender"></param>
+      <param name="args"></param>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.DataGeneratedEventArgs">
+      <summary>
+            Represents a DataGeneratedEventArgs object.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.WinForms.SignalProcessing.DataGeneratedStatus)">
+      <summary>
+            Constructor. Creates and initializes a new instance of this class.
+            </summary>
+      <param name="samples">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>samples</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.WinForms.SignalProcessing.DataGeneratedStatus)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="firstSampleTimeStamp">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>firstSampleTimeStamp</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.WinForms.SignalProcessing.DataGeneratedStatus)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="status">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>status</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.WinForms.SignalProcessing.DataGeneratedStatus)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.DataGeneratedEventArgs.FirstSampleTimeStamp">
+      <summary>
+            Timestamp when a first sample occured.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.DataGeneratedEventArgs.Samples">
+      <summary>
+            Array of samples.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.DataGeneratedEventArgs.Status">
+      <summary>
+            Status of generated data.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.DataGeneratedEventHandler">
+      <summary>
+            Data generation event.
+            </summary>
+      <param name="args"></param>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.DataGeneratedStatus">
+      <summary>
+            Enumeration of data generated statuses.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.DataGeneratedStatus.Ok">
+      <summary>
+            Format is valid.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.DataGeneratedStatus.UnknownError">
+      <summary>
+            Format is invalid.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.EndOfFileEventHandler">
+      <summary>
+            Read end of file event.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.FilterRoutines">
+      <summary>
+            Static methods for signal filtering
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FilterRoutines.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.WinForms.SignalProcessing.FilterRoutines</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FilterRoutines.MovingAverage(System.Double[],System.Int32)">
+      <summary>
+            Moving (floating) average. Smoothens the given data by calculating an average based on used value and its neighbor values.
+            </summary>
+      <param name="values">Input values</param>
+      <param name="windowLength">Averaging window length. Calculates output as average of each value and neighbors in range - windowLength / 2...+ windowLength / 2</param>
+      <returns>Filtered data</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FilterRoutines.SetDeploymentKey(System.String)">
+      <summary>
+            Sets deployment key.
+            </summary>
+      <param name="deploymentKey">LightningChart deployment key</param>
+      <exception cref="T:System.ArgumentException"></exception>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.FIRFilter">
+      <summary>
+            Finite Impulse Response (FIR) filter
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FIRFilter.#ctor">
+      <summary>
+            Filter constructor
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FIRFilter.#ctor(System.Double[])">
+      <summary>
+            Filter constructor.
+            </summary>
+      <param name="factors">Filter factor table.</param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.FIRFilter.CanOutput">
+      <summary>
+            This is set true by the filter after at least samples of delay have been fed to filter. 
+            The delay is the filter tap factor length / 2. 
+            This is a public variable because of performance reasons. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FIRFilter.FilterData(System.Double,System.Double@)">
+      <summary>
+            Filters a single data value.
+            </summary>
+      <param name="value">Value to be filtered.</param>
+      <param name="filteredValue">Filtered value.</param>
+      <returns>True if filtering was successful</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FIRFilter.FilterData(System.Double[],System.Double[]@,System.Int32)">
+      <summary>
+            Filters an array of data.
+            Cannot be used inside Paraller.For loop.
+            </summary>
+      <param name="data">Array of data to be filtered.</param>
+      <param name="filteredData">Filtered data</param>
+      <param name="countout">Smooth start</param>
+      <returns>True if filtering was successful</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FIRFilter.GetDelay">
+      <summary>
+            Get delay of filter as samples.
+            </summary>
+      <returns>Delay in samples.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FIRFilter.GetFactors">
+      <summary>
+            Gets the array of filter factors.
+            </summary>
+      <returns>Factor array</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FIRFilter.Reset">
+      <summary>
+            Reset filter internal delay line and states. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FIRFilter.SetFactors(System.Double[])">
+      <summary>
+            Sets factors for the filter.
+            </summary>
+      <param name="factors">Array of factors</param>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs">
+      <summary>
+            Represents a FrequencySineSweepChangedEventArgs object.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)">
+      <summary>
+            Constructor. Creates and initializes a new instance of this class.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequencyFrom">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequencyFrom</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequencyTo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequencyTo</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="durationMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>durationMs</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.DurationMs">
+      <summary>
+            Duration.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.FrequencyFrom">
+      <summary>
+            Beginning of the frequency range.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.FrequencyTo">
+      <summary>
+            End of the frequency range.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.FrequencySineSweepChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent">
+      <summary>
+            Sine frequency sweep waveform component. Runs with constant amplitude, from frequency to another, during given duration.
+            Then jumps to start starting frequency again. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.#ctor(Arction.WinForms.SignalProcessing.FrequencySineSweepComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.Amplitude">
+      <summary>
+            Amplitude of sine sweep
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.CreateCopy">
+      <summary>
+            Create a copy of frequency sine sweep component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.DurationMs">
+      <summary>
+            Duration of sine sweep in ms. Runs from starting frequency to end frequency during this duration. 
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.Enabled">
+      <summary>
+            Is the sweep component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.FrequencyFrom">
+      <summary>
+            Start frequency of sine sweep.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.FrequencyTo">
+      <summary>
+            End frequency of sine sweep.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.Offset">
+      <summary>
+            Offset of sine sweep
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.FrequencySineSweepComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.IDataSource">
+      <summary>
+            Data source interface.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.IDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler)">
+      <summary>
+            Connect data source.
+            </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="dataGenerated">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dataGenerated</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="started">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>started</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="stopped">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>stopped</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.IDataSource.DataGenerated">
+      <summary>
+            Data generation event.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.IDataSource.Disconnect(System.Object)">
+      <summary>
+            Disconnect data source.
+            </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IDataSource.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IDataSource.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.IDataSource.Started">
+      <summary>
+            Start event.
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.IDataSource.Stopped">
+      <summary>
+            Stop event.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.IFileDataSource">
+      <summary>
+            File data source interface.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)">
+      <summary>
+            Connect to source.
+            </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="dataGenerated">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dataGenerated</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="started">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>started</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="stopped">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>stopped</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="endOfFile">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endOfFile</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="markerRead">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>markerRead</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.IFileDataSource.EndOfFile">
+      <summary>
+            Read end of file event.
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.IFileDataSource.MarkerRead">
+      <summary>
+            Marker read event.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.IIRFilter">
+      <summary>
+            Infinite Impulse Response (IIR) filter
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.IIRFilter.#ctor">
+      <summary>
+            Constructor
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.IIRFilter.#ctor(System.Double[],System.Double,System.Double)">
+      <summary>
+            Filter constructor.
+            </summary>
+      <param name="filterNumsAndDenoms">Filter factor table. 
+            <param name="unstableOutputLimitMin">Minimum value allowed for the output</param><param name="unstableOutputLimitMax">Maximum value allowed for the output. 
+            If the output value is not withing the range, filtering methods return UnstableIIR status</param>
+            The first half contains numerators and the second half denominators.</param>
+      <param name="unstableOutputLimitMin">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>unstableOutputLimitMin</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IIRFilter.#ctor(System.Double[],System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="unstableOutputLimitMax">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>unstableOutputLimitMax</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IIRFilter.#ctor(System.Double[],System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.IIRFilter.#ctor(System.Double[],System.Double[],System.Double,System.Double,System.Double)">
+      <summary>
+            Makes an IIR filter from coefficients. H(z) = B(z)/A(z).
+            </summary>
+      <param name="coeffNumerators">B factors</param>
+      <param name="coeffDenominators">A factors</param>
+      <param name="unstableOutputLimitMin">Unstable output limit minimum</param>
+      <param name="unstableOutputLimitMax">Unstable output limit maximum</param>
+      <param name="gain">Gain for the filter</param>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.IIRFilter.FilterData(System.Double[],System.Double[]@)">
+      <summary>
+            Filters an array of data.
+            Cannot be used inside Paraller.For loop
+            </summary>
+      <param name="data">Array to be filtered.</param>
+      <param name="filteredData">Filtered data</param>
+      <returns>False if unstable filter, otherwise true</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.IIRFilter.Reset">
+      <summary>
+            Resets the internal filtering buffers. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.IIRFilter.SetABFactors(System.Double[],System.Double[],System.Double,System.Double,System.Double)">
+      <summary>
+            Makes an IIR filter from coefficients. H(z) = B(z)/A(z).
+            </summary>
+      <param name="coeffNumerators">B factors</param>
+      <param name="coeffDenominators">A factors</param>
+      <param name="unstableOutputLimitMin">Unstable output limit minimum</param>
+      <param name="unstableOutputLimitMax">Unstable output limit maximum</param>
+      <param name="gain">Gain for the filter</param>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.IIRFilter.SetFactors(System.Double[],System.Double,System.Double)">
+      <summary>
+            Sets factors for the filter.
+            </summary>
+      <param name="filterNumsAndDenoms">Factor array of nums and denoms</param>
+      <param name="unstableOutputLimitMin">Unstable output limit minimum</param>
+      <param name="unstableOutputLimitMax">Unstable output limit maximum</param>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.ISampledDataSource">
+      <summary>
+            Sampeled data source.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.IWaveFormComponent">
+      <summary>
+            Waveform component interface.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.IWaveFormComponent.CreateCopy">
+      <summary>
+            Create copy of object. Interface method.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.IWaveFormComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.IWaveFormComponent.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.IWaveFormComponent.PropertyChanged">
+      <summary>
+            Event. Occures when property is changed.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.MarkerReadEventArgs">
+      <summary>
+            Represents a MarkerReadEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.MarkerReadEventArgs.#ctor(System.Int32,System.Double)">
+      <summary>
+            Event constructor.Creates and initializes a new instance of this event.
+            </summary>
+      <param name="markerType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>markerType</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.MarkerReadEventArgs.#ctor(System.Int32,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="timeStamp">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>timeStamp</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.MarkerReadEventArgs.#ctor(System.Int32,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.MarkerReadEventArgs.MarkerType">
+      <summary>
+            Type of a marker.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.MarkerReadEventArgs.TimeStamp">
+      <summary>
+            Timestamp when a certain event occured.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.MarkerReadEventHandler">
+      <summary>
+            Marker read event.
+            </summary>
+      <param name="args"></param>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.PlaybackDeviceInfo">
+      <summary>
+            Represents playback device info.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.PlaybackDeviceInfo.#ctor(System.String,System.Guid,System.String)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="description">Playback device description.</param>
+      <param name="driverId">Playback device id.</param>
+      <param name="moduleName">Playback device module name.</param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.PlaybackDeviceInfo.Description">
+      <summary>
+            Playback device description.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.PlaybackDeviceInfo.DriverGuid">
+      <summary>
+            Playback device id.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.PlaybackDeviceInfo.Equals(System.Object)">
+      <summary>
+            Determines whether the specified PlaybackDeviceInfo object has the same id as the current PlaybackDeviceInfo object.
+            </summary>
+      <param name="obj">PlaybackDeviceInfo object to compare with the current object.</param>
+      <returns>true if the specified PlaybackDeviceInfo has the same id as the current PlaybackDeviceInfo object; otherwise, false.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.PlaybackDeviceInfo.GetHashCode">
+      <summary>
+            Serves as a hash function for the current object.
+            </summary>
+      <returns>A hash code for the current object.</returns>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.PlaybackDeviceInfo.ModuleName">
+      <summary>
+            Playback device module name.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.PlaybackDeviceInfo.ToString">
+      <summary>
+            Returns a string that represents the current object.
+            </summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.RandomNoiseChangedEventArgs">
+      <summary>
+            Represents a RandomNoiseChangedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)">
+      <summary>
+            Creates and initializes a new instance of this class.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.RandomNoiseChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.RandomNoiseChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.RandomNoiseChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.RandomNoiseChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.RandomNoiseComponent">
+      <summary>
+            Random noise waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.RandomNoiseComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.RandomNoiseComponent.#ctor(Arction.WinForms.SignalProcessing.RandomNoiseComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.RandomNoiseComponent.Amplitude">
+      <summary>
+            Amplitude of random noise component. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.RandomNoiseComponent.CreateCopy">
+      <summary>
+            Create a copy of random noise component. 
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.RandomNoiseComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.RandomNoiseComponent.Enabled">
+      <summary>
+            Is the random noise component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.RandomNoiseComponent.GetRandomValue">
+      <summary>
+            Get random value, using offset and amplitude 
+            </summary>
+      <returns>Random value, in range -Amplitude+Offset ... +Amplitude+Offset</returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.RandomNoiseComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.RandomNoiseComponent.Offset">
+      <summary>
+            Offset of random noise component
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.RandomNoiseComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.RandomNoiseComponent.ToString">
+      <summary>
+            Convert class description to string.
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.RecordingDeviceInfo">
+      <summary>
+            Represents recording device info.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.RecordingDeviceInfo.#ctor(System.String,System.Guid,System.String)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="description">Recording device description.</param>
+      <param name="driverId">Recording device id.</param>
+      <param name="moduleName">Recording device module name.</param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.RecordingDeviceInfo.Description">
+      <summary>
+            Recording device description.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.RecordingDeviceInfo.DriverGuid">
+      <summary>
+            Recording device id.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.RecordingDeviceInfo.Equals(System.Object)">
+      <summary>
+            Determines whether the specified RecordingDeviceInfo has the same id as the current RecordingDeviceInfo object.
+            </summary>
+      <param name="obj">RecordingDeviceInfo object to compare with the current object.</param>
+      <returns>true if the specified RecordingDeviceInfo has the same id as the current RecordingDeviceInfo object; otherwise, false.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.RecordingDeviceInfo.GetHashCode">
+      <summary>
+            Serves as a hash function for the current object.
+            </summary>
+      <returns>A hash code for the current object.</returns>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.RecordingDeviceInfo.ModuleName">
+      <summary>
+            Recording device module name.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.RecordingDeviceInfo.ToString">
+      <summary>
+            Returns a string that represents the current object.
+            </summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SelectedPage">
+      <summary>
+            Active page that is shown in the UI
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SelectedPage.Sines">
+      <summary>
+            Sine waveforms
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SelectedPage.Squares">
+      <summary>
+            Squares
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SelectedPage.Triangles">
+      <summary>
+            Triangles
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SelectedPage.RandomNoises">
+      <summary>
+            Random noises
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SelectedPage.FrequencySineSweeps">
+      <summary>
+            Frequency sine sweeps
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SelectedPage.AmplitudeSineSweeps">
+      <summary>
+            Amplitude sine sweeps
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SelectedPage.All">
+      <summary>
+            All
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SignalGenerator">
+      <summary>
+            Signal generator generates signal on-the-fly. Timing is based on computer's clock.
+            You can define many different signal waveform components and they are combined as one signal output. 
+            The wave component types are: Sine, Triangle, Square and RandomNoise.
+            Sample interval is determined as 1/SamplingFrequency. 
+            You can define output range scale factor by setting Factor property, but don't confuse this with Amplitude property of a waveform component. 
+            Many signal generators can be combined as a synchronized, multi-channel output, via master-slave relationship. 
+            You can use the built-in user interface to configure the settings and waveforms or just hide the control define your own user
+            interface set the waveforms by filling the waveform component lists. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.#ctor">
+      <summary>
+            Create and initializes a new instance of SignalGenerator class.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.CreateWaveformCompsFromUI">
+      <summary>
+            Create wave form from generator user interface
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.SignalGenerator.DataGenerated">
+      <summary>
+            Occurs when new data is generated.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.Factor">
+      <summary>
+            General factor for output signal. Allows using e.g. millivolt range by setting this 0.001, or 1E-3.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.Finalize">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalGenerator.Finalize</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.GenerateBlock(System.Int32)">
+      <summary>
+            Generates block of having given sample count, using properties set
+            </summary>
+      <param name="sampleCount">Sample count (for each channel)</param>
+      <returns>Multi-channel data array</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.GetParentWindow">
+      <summary>
+            Get parent window handle (HWND). 
+            Needed when using the control from other systems than .NET 
+            </summary>
+      <returns>Parent window handle</returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.IsGeneratorEnabled">
+      <summary>
+            Gets or sets the state (running or not) of this signal generator.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.MasterGenerator">
+      <summary>
+            Master generator. Several generators can be combined together to produce a synchronized multi-channel output data stream. 
+            Master sets the sampling frequency for each slave generator and combines the samples from each slave to master's output data stream.
+            Set this null if this is a master generator. 
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.MultiCoreProcessing">
+      <summary>
+            If enabled, computes the signal in several CPU threads. 
+            Enables faster rendering when CPU has more cores than 1. Only certain parts of chart are multicore optimized. 
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.OutputInterval">
+      <summary>
+            Output interval in ms. This is only the target value, and not always accurate. 
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.Running">
+      <summary>
+            Gets the state of this generator (running or not).
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.SamplingFrequency">
+      <summary>
+            Sampling frequency. The count of output points calculated per second. 
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.SelectedPage">
+      <summary>
+            Gets or set selected page in signal generator UI.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.SelectedPageIndex">
+      <summary>
+            Gets or sets selected page index in UI.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.SetDeploymentKey(System.String)">
+      <summary>
+            Set Deploymentkey
+            </summary>
+      <param name="deploymentKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>deploymentKey</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalGenerator.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.SetParentWindow(System.IntPtr)">
+      <summary>
+            Set parent window handle (HWND). 
+            Needed when using the control from other systems than .NET 
+            <param name="hwnd">Parent window handle</param></summary>
+      <param name="hwnd">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>hwnd</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalGenerator.SetParentWindow(System.IntPtr)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.SetUwpDeveloperKey(System.String)">
+      <summary>
+            Set UwpDeveloperKey
+            </summary>
+      <param name="uwpDeveloperKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>uwpDeveloperKey</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalGenerator.SetUwpDeveloperKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.Start">
+      <summary>
+            Enable signal generator.
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.SignalGenerator.Started">
+      <summary>
+            Occurs when signal generator is started.
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.SignalGenerator.Stopped">
+      <summary>
+            Occurs when signal generator is stopped.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.StopRequest">
+      <summary>
+            Disable signal generator.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.ThreadInvoking">
+      <summary>
+            Built-in invoking to UI thread when using ThreadType = Thread. 
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.ThreadType">
+      <summary>
+            Thread operation type.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.ToString">
+      <summary>
+            Convert class description to string.
+            </summary>
+      <returns>Class description.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalGenerator.UpdateUIFromWaveFormComponents">
+      <summary>
+            Fills the UI from waveform components 
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.WaveFormAmplitudeSineSweeps">
+      <summary>
+            Waveform, amplitude sine sweep components.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.WaveFormFrequencySineSweeps">
+      <summary>
+            Waveform, frequency sine sweep components.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.WaveFormRandomNoises">
+      <summary>
+            Waveform random noise components.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.WaveFormSines">
+      <summary>
+            Waveform sine components.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.WaveFormSquares">
+      <summary>
+            Waveform square components.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalGenerator.WaveFormTriangles">
+      <summary>
+            Waveform triangle components.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SignalReader">
+      <summary>
+            Sampled signal file reader. Reads data from various formats, like *.wav, *.sid. 
+            The output data stream will have equal amount of channels.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalReader.#ctor">
+      <summary>
+            Creates and initializes a new instance of SignalReader class.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.BitsPerSample">
+      <summary>
+            Bits per sample.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.ChannelCount">
+      <summary>
+            Channel count.  
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalReader.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)">
+      <summary>
+            Connect signal reader. Start reading data.
+            </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="dataGenerated">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dataGenerated</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="started">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>started</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="stopped">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>stopped</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="endOfFile">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endOfFile</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="markerRead">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>markerRead</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.Connect(System.Object,Arction.WinForms.SignalProcessing.DataGeneratedEventHandler,Arction.WinForms.SignalProcessing.StartedEventHandler,Arction.WinForms.SignalProcessing.StoppedEventHandler,Arction.WinForms.SignalProcessing.EndOfFileEventHandler,Arction.WinForms.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.SignalReader.DataGenerated">
+      <summary>
+            New data generated. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalReader.Disconnect(System.Object)">
+      <summary>
+            Disconnect signal reader. Remove data.
+            </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.SignalReader.EndOfFile">
+      <summary>
+            End of file has been reached
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.Factor">
+      <summary>
+            General factor for output signal. 
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.FileFilterString">
+      <summary>
+            Filter string for file open dialog.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.FileName">
+      <summary>
+            File name to be read
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.FileSize">
+      <summary>
+            File size in bytes.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalReader.Finalize">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.Finalize</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.IsLooping">
+      <summary>
+            The file reading can be automatically moved to beginning when end of file has been reached, by enabling this. 
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.IsReaderEnabled">
+      <summary>
+            Gets or sets the state (running or not) of this signal reader.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.Length">
+      <summary>
+            Length of opened file, in samples (for each channel).
+            For some file formats, this is an estimate. 
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.SignalReader.MarkerRead">
+      <summary>
+            Marker read. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalReader.OpenFile(System.String)">
+      <summary>
+            Open file with certain name.
+            </summary>
+      <param name="fileName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fileName</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.OpenFile(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.OpenFile(System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.OutputInterval">
+      <summary>
+            Output interval in ms. This is only the target value, and not always accurate. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalReader.ReadAllData(System.String,System.Int32@,System.Int32@,System.Double[][]@,Arction.WinForms.SignalProcessing.SignalReader.Marker[]@)">
+      <summary>
+            Read all data from file. The output is a multi-channel samples array, and array of markers.  
+            </summary>
+      <param name="fileName">Signal file name. The file extension must be a supported one: wav, sid or ssd </param>
+      <param name="channelCount">Channel count</param>
+      <param name="samplingFrequency">Sampling frequency in Hz</param>
+      <param name="samples">Multi-channel samples array. First dimension is the channels, second dimension is samples.
+            For example, samples[2][9] gives access to 10th sample of 3rd channel.</param>
+      <param name="markers">Array of markers. Null if none was found.</param>
+      <returns>File open result</returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.SamplingFrequency">
+      <summary>
+            Gets sampling frequency. The number of output points calculated per second. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalReader.SetDeploymentKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="deploymentKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>deploymentKey</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SignalReader.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalReader.Start">
+      <summary>
+            Enable signal reader.
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.SignalReader.Started">
+      <summary>
+            Reader has been started
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.SignalReader.Stopped">
+      <summary>
+            File reader has stopped. End of file has been reached and looping is not enabled. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalReader.StopRequest">
+      <summary>
+            Disable signal reader.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.ThreadInvoking">
+      <summary>
+            Built-in invoking to UI thread when using ThreadType = Thread. 
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SignalReader.ThreadType">
+      <summary>
+            Thread type. Timer or thread operation.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SignalReader.ToString">
+      <summary>
+            Returns class description.
+            </summary>
+      <returns>Class description.</returns>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SignalReader.FileFormat">
+      <summary>
+            Enumaration of file formats.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.FileFormat.Wav">
+      <summary>
+            WAV (filename extension *.wav).
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.FileFormat.Sid">
+      <summary>
+            SID (filename extension *.sid).
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.FileFormat.Ssd">
+      <summary>
+            SSD (filename extension *.ssd).
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SignalReader.Marker">
+      <summary>
+            Marker.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.Marker.TimeStamp">
+      <summary>
+            Time stamp.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.Marker.Type">
+      <summary>
+            Type.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SignalReader.OpenResult">
+      <summary>
+            Open result.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.OpenResult.OK">
+      <summary>
+            File opened successfully.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.OpenResult.SignalReaderRunning">
+      <summary>
+            Signal reader is running.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.OpenResult.FileNotAccessible">
+      <summary>
+            File is not accessible.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.OpenResult.UnknownExtension">
+      <summary>
+            The extension is not one of the supported ones.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.OpenResult.UnknownWaveFormat">
+      <summary>
+            WAV audio format must be PCM. Others will fail.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.OpenResult.LicenseError">
+      <summary>
+            Installed license does not allow using SignalReader
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SignalReader.ReadSampleBundlesStatus">
+      <summary>
+            Enumaration of defined types of read sample bundles.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.ReadSampleBundlesStatus.AllSamplesRead">
+      <summary>
+            Read all samples.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.ReadSampleBundlesStatus.SamplesPartiallyReadEndOfFile">
+      <summary>
+            Read samples partially, only end of file.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.ReadSampleBundlesStatus.SamplesPartiallyReadMarkerNext">
+      <summary>
+            Read samples partially, next marker.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.ReadSampleBundlesStatus.Marker">
+      <summary>
+            Read markers.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SignalReader.WavHeaderReadResult">
+      <summary>
+            Enumaration of defined validations of formats.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.WavHeaderReadResult.OK">
+      <summary>
+            Format is valid.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.WavHeaderReadResult.InvalidWavFormat">
+      <summary>
+            Format is invalid.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SignalReader.WavInfo">
+      <summary>
+            WAV audio format information.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.WavInfo.iByteRate">
+      <summary>
+            Byte rate.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.WavInfo.iSampleRate">
+      <summary>
+            Sample rate.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.WavInfo.sAudioFormat">
+      <summary>
+            Audio format.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.WavInfo.sBitsPerSample">
+      <summary>
+            Bits per second (bit/s).
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.WavInfo.sBlockAlign">
+      <summary>
+            Block align.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SignalReader.WavInfo.sChannels">
+      <summary>
+            Channels.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SineChangedEventArgs">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.WinForms.SignalProcessing.SineChangedEventArgs</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)">
+      <summary>
+            Occures when parameters is changed. Initializes a new instance of sine component.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="delayMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>delayMs</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SineChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SineChangedEventArgs.DelayMs">
+      <summary>
+            Delay in milliseconds.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SineChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SineChangedEventArgs.Frequency">
+      <summary>
+            Frequency.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SineChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SineChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SineComponent">
+      <summary>
+            Sine waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SineComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SineComponent.#ctor(Arction.WinForms.SignalProcessing.SineComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SineComponent.Amplitude">
+      <summary>
+            Amplitude of sine component.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SineComponent.CreateCopy">
+      <summary>
+            Create a copy of sine component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SineComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SineComponent.DelayMs">
+      <summary>
+            Delay of sine component in ms.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SineComponent.Enabled">
+      <summary>
+            Is the sine component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SineComponent.Frequency">
+      <summary>
+            Frequency of sine component
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SineComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SineComponent.Offset">
+      <summary>
+            Offset of sine component
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.SineComponent.PropertyChanged">
+      <summary>
+            Event occures when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SineComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SpectrumCalculator">
+      <summary>
+            Spectrum calculator. Uses FFT routines to convert time signal data into frequency information, or vice versa. 
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SpectrumCalculator.#ctor">
+      <summary>
+            Creates and initializes a new instance of SpectrumCalculator class.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SpectrumCalculator.CalculateBackward(System.Double[],System.Double[]@)">
+      <summary>
+            Calculates backwards FFT conversion. Converts frequency component data into signal sample data. 
+            </summary>
+      <param name="samples">Output signal samples</param>
+      <param name="fftData">Input FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SpectrumCalculator.CalculateBackward(System.Single[],System.Single[]@)">
+      <summary>
+            Calculates backwards FFT conversion. Converts frequency component data into signal sample data. 
+            </summary>
+      <param name="samples">Output signal samples</param>
+      <param name="fftData">Input FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SpectrumCalculator.CalculateForward(System.Double[],System.Double[]@)">
+      <summary>
+            Calculates FFT conversion. Converts signal data into frequency component data. 
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftData">Output FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SpectrumCalculator.CalculateForward(System.Single[],System.Single[]@)">
+      <summary>
+            Calculates FFT conversion. Converts signal data into frequency component data. 
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftData">Output FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SpectrumCalculator.Finalize">
+      <summary>
+            Finalizer.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SpectrumCalculator.PowerSpectrum(System.Double[],System.Double[]@)">
+      <summary>
+            Calculates power spectrum, having all FFT data in absolute values.  
+            The count of output FFT data is same than input data. 
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftData">Output FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SpectrumCalculator.PowerSpectrum(System.Single[],System.Single[]@)">
+      <summary>
+            Calculates power spectrum, having all FFT data in absolute values.  
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftData">Output FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SpectrumCalculator.PowerSpectrumOverlapped(System.Double[],System.Int32,System.Double,System.Double[]@,System.Int32@)">
+      <summary>
+            Calculates power spectrum, having all FFT data in absolute values. Overlaps moving FFT window until all data is processed. 
+            The count of output FFT data is same than input data. 
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftWindowLength">Length of moving calculation window.</param>
+      <param name="overlapPercent">Overlapping percent. Moving FFT window is shifted by this amount for next calculation round. Valid values are 0...99</param>
+      <param name="fftData">Output FFT data. Length equals fftWindowLenght. If samples length is less than fftWindowLength, outputs samples length of data.</param>
+      <param name="processedSampleCount">Processed sample count. It is possible that all samples are not processed from the end, if there's not enough data for last FFT window.</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SpectrumCalculator.PowerSpectrumOverlapped(System.Single[],System.Int32,System.Double,System.Single[]@,System.Int32@)">
+      <summary>
+            Calculates power spectrum, having all FFT data in absolute values. Overlaps moving FFT window until all data is processed. 
+            The count of output FFT data is same than input data. 
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftWindowLength">Length of moving calculation window.</param>
+      <param name="overlapPercent">Overlapping percent. Moving FFT window is shifted by this amount for next calculation round. Valid values are 0...99</param>
+      <param name="fftData">Output FFT data. Length equals fftWindowLenght. If samples length is less than fftWindowLength, outputs samples length of data.</param>
+      <param name="processedSampleCount">Processed sample count. It is possible that all samples are not processed from the end, if there's not enough data for last FFT window.</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SpectrumCalculator.SetDeploymentKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SpectrumCalculator.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="deploymentKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>deploymentKey</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SpectrumCalculator.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SquareChangedEventArgs">
+      <summary>
+            Represents a SquareChangedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)">
+      <summary>
+            Occures when parameters is changed. Initializes a new instance of square waveform component.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="delayMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>delayMs</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="symmetry">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>symmetry</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.DelayMs">
+      <summary>
+            Delay in milliseconds.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.Frequency">
+      <summary>
+            Frequency.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.SquareChangedEventArgs.Symmetry">
+      <summary>
+            Symmetry.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.SquareComponent">
+      <summary>
+            Square waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SquareComponent.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.WinForms.SignalProcessing.SquareComponent</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SquareComponent.#ctor(Arction.WinForms.SignalProcessing.SquareComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SquareComponent.#ctor(Arction.WinForms.SignalProcessing.SquareComponent)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SquareComponent.Amplitude">
+      <summary>
+            Amplitude of square component.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SquareComponent.CreateCopy">
+      <summary>
+            Create a copy of square component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.SquareComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SquareComponent.DelayMs">
+      <summary>
+            Delay of square component in ms.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SquareComponent.Enabled">
+      <summary>
+            Is the square component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SquareComponent.Frequency">
+      <summary>
+            Frequency of square component
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SquareComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SquareComponent.Offset">
+      <summary>
+            Offset of square component
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.SquareComponent.PropertyChanged">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.WinForms.SignalProcessing.SquareComponent.PropertyChanged</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.SquareComponent.Symmetry">
+      <summary>
+            Square wave symmetry. Valid range is 0...1.
+            If symmetry is &lt; 0.5, the 'low'stage of noise wave is longer than 'high' stage. 
+            Vice versa, value &gt; 0.5 makes the 'high' stage longer
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.SquareComponent.ToString">
+      <summary>
+            Convert class description to string.
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.StartedEventArgs">
+      <summary>
+            Represents a StartedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)">
+      <summary>
+            Event constructor. Creates and initializes a new instance of this event.
+            </summary>
+      <param name="samplesPerSecond">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>samplesPerSecond</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="bitsPerSample">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>bitsPerSample</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="channelCount">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>channelCount</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.StartedEventArgs.BitsPerSample">
+      <summary>
+            Read bits per sample.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.StartedEventArgs.ChannelCount">
+      <summary>
+            Channel counter.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.StartedEventArgs.SamplesPerSecond">
+      <summary>
+            Read samples per second.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.StartedEventHandler">
+      <summary>
+            Start event.
+            </summary>
+      <param name="args"></param>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.StoppedEventHandler">
+      <summary>
+            Stop event.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.ThreadType">
+      <summary>
+            Threading type
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.ThreadType.Thread">
+      <summary>
+            Use thread.
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.ThreadType.Timer">
+      <summary>
+            Use timer.
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs">
+      <summary>
+            Represents a TriangleChangedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)">
+      <summary>
+            Occures when parameters is changed. Initializes a new instance of triangle component
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="delayMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>delayMs</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="symmetry">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>symmetry</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.DelayMs">
+      <summary>
+            Delay in milliseconds
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.Frequency">
+      <summary>
+            Frequency
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.Id">
+      <summary>
+            Id
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.Offset">
+      <summary>
+            Offset
+            </summary>
+    </member>
+    <member name="F:Arction.WinForms.SignalProcessing.TriangleChangedEventArgs.Symmetry">
+      <summary>
+            Symmetry
+            </summary>
+    </member>
+    <member name="T:Arction.WinForms.SignalProcessing.TriangleComponent">
+      <summary>
+            Triangle waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.TriangleComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.TriangleComponent.#ctor(Arction.WinForms.SignalProcessing.TriangleComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.TriangleComponent.Amplitude">
+      <summary>
+            Amplitude of triangle component.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.TriangleComponent.CreateCopy">
+      <summary>
+            Create copy of triangle component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.WinForms.SignalProcessing.TriangleComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.TriangleComponent.DelayMs">
+      <summary>
+            Delay of triangle component in ms.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.TriangleComponent.Enabled">
+      <summary>
+            Is the triangle component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.TriangleComponent.Frequency">
+      <summary>
+            Frequency of triangle component
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.TriangleComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.TriangleComponent.Offset">
+      <summary>
+            Offset of triangle component
+            </summary>
+    </member>
+    <member name="E:Arction.WinForms.SignalProcessing.TriangleComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="P:Arction.WinForms.SignalProcessing.TriangleComponent.Symmetry">
+      <summary>
+            Triangle wave symmetry. Valid range is 0...1.
+            </summary>
+    </member>
+    <member name="M:Arction.WinForms.SignalProcessing.TriangleComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,4000 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Arction.Wpf.SignalProcessing.SignalTools</name>
+  </assembly>
+  <members>
+    <member name="T:Arction.Wpf.SignalProcessing.Action">
+      <summary>
+            A multi-purpose delegate to use when you need neither parameters nor a return value.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs">
+      <summary>
+            Represents a AmplitudeSineSweepChangedEventArgs object.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)">
+      <summary>
+            Creates and initializes a new instance of this class.
+            </summary>
+      <param name="amplitudeFrom">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitudeFrom</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="amplitudeTo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitudeTo</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="durationMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>durationMs</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.AmplitudeFrom">
+      <summary>
+            Beginning of the amplitude range.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.AmplitudeTo">
+      <summary>
+            End of the amplitude range.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.DurationMs">
+      <summary>
+            Duration in milliseconds.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Frequency">
+      <summary>
+            Frequency.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AmplitudeSineSweepChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent">
+      <summary>
+            Sine amplitude sweep waveform component. Runs with constant frequency, from amplitude to another, during given duration.
+            Then jumps to start starting amplitude again. 
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.#ctor(Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.AmplitudeFrom">
+      <summary>
+            Starting amplitude of sine sweep
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.AmplitudeTo">
+      <summary>
+            End amplitude of sine sweep
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.CreateCopy">
+      <summary>
+            Create a copy of the amplitude sine sweep component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.DurationMs">
+      <summary>
+            Duration of sine sweep in ms. Runs from starting amplitude to end amplitude during this duration. 
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.Enabled">
+      <summary>
+            Is the sweep component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.Frequency">
+      <summary>
+            Frequency of sine sweep.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.Offset">
+      <summary>
+            Offset of sine sweep
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AmplitudeSineSweepComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.AudioInput">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Wpf.SignalProcessing.AudioInput</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioInput.#ctor">
+      <summary>
+            Creates and initializes a new instance of AudioInput class.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioInput.BitsPerSample">
+      <summary>
+            Gets or sets how many bits are allocated per sample. 
+            Supported values are 8 and 16. If other value is used, 
+            16 is used instead. Is settable when IsInputEnabled is false. 
+            This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioInput.BitsPerSampleProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioInput.BitsPerSample dependency property.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioInput.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)">
+      <summary>
+            Connects this AudioInput instance to a target object that has at least one of the three event handlers defined.
+            </summary>
+      <param name="target">Target object that this AudioInput instance is connected with.</param>
+      <param name="dataGenerated">DataGeneratedEventHandler event handler.</param>
+      <param name="started">StartedEventHandler event handler.</param>
+      <param name="stopped">StoppedEventHandler event handler.</param>
+      <returns>True if connection was created succesfully. Otherwise false.</returns>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.AudioInput.DataGenerated">
+      <summary>
+            Occurs when new data has been generated.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioInput.Disconnect(System.Object)">
+      <summary>
+            Disconnects a target object from this AudioInput instance.
+            </summary>
+      <param name="target">Target object to be disconnected.</param>
+      <returns>True if target object was diconnected succesfully. Otherwise false.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioInput.GetRecordingDevices">
+      <summary>
+            Returns a list of RecordingDeviceInfo objects that describe available Windows recording devices.
+            </summary>
+      <returns>List of recording devices.</returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioInput.IsInputEnabled">
+      <summary>
+            Gets or sets the state of this instance (i.e. starts or stops it). 
+            Setting this property true is the same as calling Start method where 
+            false is the same as calling Stop method. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioInput.IsInputEnabledProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioInput.IsInputEnabled dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioInput.IsStereo">
+      <summary>
+            Gets or sets whether to use two channels (stereo) or just one (mono). 
+            Is settable when IsInputEnabled is false. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioInput.IsStereoProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioInput.IsStereo dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioInput.RecordingDevice">
+      <summary>
+            Gets or sets the current recording device. Is settable when 
+            IsInputEnabled is false. By setting this property null, Windows' 
+            default recording device is used. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioInput.RecordingDeviceProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioInput.RecordingDeviceProperty dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioInput.SamplesPerSecond">
+      <summary>
+            Get or sets sampling frequency. Is settable when IsInputEnabled is false. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioInput.SamplesPerSecondProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioInput.SamplesPerSecond dependency property.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioInput.SetDeploymentKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AudioInput.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="deploymentKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>deploymentKey</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AudioInput.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioInput.Start">
+      <summary>
+            Starts this instance. Is equivalent to setting IsInputEnabled property true.
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.AudioInput.Started">
+      <summary>
+            Occurs when audio input has been started.
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.AudioInput.Stopped">
+      <summary>
+            Occurs when audio input has been stopped.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioInput.StopRequest">
+      <summary>
+            Signals this instance to stop. Stopping does not occur immediately 
+            after exiting this method. By subscribing to Stopped event, caller 
+            is notified when everything has stopped.  Is equivalent to setting 
+            IsInputEnabled property true.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioInput.ThreadInvoking">
+      <summary>
+            Gets or sets whether this instance automatically synchronizes its 
+            events to the main UI thread hence eliminating the need to call 
+            Dispatcher.Invoke method on caller's side. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioInput.ThreadInvokingProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioInput.ThreadInvoking dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioInput.Volume">
+      <summary>
+            Gets or sets volume (0-100). Is settable when IsInputEnabled is false. 
+            This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioInput.VolumeProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioInput.Volume dependency property.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.AudioOutput">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Wpf.SignalProcessing.AudioOutput</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioOutput.#ctor">
+      <summary>
+            Creates and initializes a new instance of AudioOutput class.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioOutput.AddSamples(System.Double[][])">
+      <summary>
+            Use this method to feed new data to audio output stream.
+            </summary>
+      <param name="samples">Samples to be fed to audio output stream ([Channel][Sample]).</param>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioOutput.Balance">
+      <summary>
+            Gets or sets audio playback balance. Valid values are between -100 to 100. 
+            -100 means that audio is played only through the left speaker. 0 means that 
+            both speakers output audio. 100 means that audio is played only through 
+            the right speaker. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioOutput.BalanceProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioOutput.Balance dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioOutput.BitsPerSample">
+      <summary>
+            Gets or sets how many bits are allocated per sample. 
+            Supported values are 8 and 16. If other value is used, 
+            16 is used instead. Is settable when IsInputEnabled is false. 
+            This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioOutput.BitsPerSampleProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioOutput.BitsPerSample dependency property.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioOutput.GetPlaybackDevices">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AudioOutput.GetPlaybackDevices</parameter>
+          </include>
+        </markup>
+      </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AudioOutput.GetPlaybackDevices</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioOutput.IsOutputEnabled">
+      <summary>
+            Gets or sets the state of this instance (i.e. starts or stops it). 
+            Setting this property true is the same as calling Start method where 
+            false is the same as calling Stop method. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioOutput.IsOutputEnabledProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioOutput.IsOutputEnabled dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioOutput.IsStereo">
+      <summary>
+            Gets or sets whether to use two channels (stereo) or just one (mono). 
+            Is settable when IsInputEnabled is false. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioOutput.IsStereoProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioOutput.IsStereo dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioOutput.PlaybackDevice">
+      <summary>
+            Gets or sets the current playback device. Is settable when IsInputEnabled 
+            is false. By setting this property null, Windows' default playback device 
+            is used. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioOutput.PlaybackDeviceProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioOutput.PlaybackDevice dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioOutput.SamplesPerSecond">
+      <summary>
+            Gets or sets sampling frequency. Is settable when IsInputEnabled is false. 
+            This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioOutput.SamplesPerSecondProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioOutput.SamplesPerSecond dependency property.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioOutput.SetDeploymentKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AudioOutput.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="deploymentKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>deploymentKey</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.AudioOutput.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioOutput.Start">
+      <summary>
+            Starts this instance. Is equivalent to setting IsOutputEnabled property true.
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.AudioOutput.Started">
+      <summary>
+            Occurs when audio playback has been started.
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.AudioOutput.Stopped">
+      <summary>
+            Occurs when audio playback has been stopped.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.AudioOutput.StopRequest">
+      <summary>
+            Signals this instance to stop. Stopping does not occur immediately 
+            after exiting this method. By subscribing to Stopped event, caller 
+            is notified when everything has stopped.  Is equivalent to setting 
+            IsOutputEnabled property true.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.AudioOutput.Volume">
+      <summary>
+            Gets or sets volume (0-100). Is settable when IsInputEnabled is false. 
+            This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.AudioOutput.VolumeProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.AudioOutput.Volume dependency property.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.Wpf.SignalProcessing.CaptionVisibilityConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="targetType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>targetType</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="parameter">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>parameter</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="culture">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>culture</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="targetType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>targetType</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="parameter">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>parameter</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="culture">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>culture</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.CaptionVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.ChangedEventHandler">
+      <summary>
+            Occures when property is changed.
+            </summary>
+      <param name="sender"></param>
+      <param name="args"></param>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.DataGeneratedEventArgs">
+      <summary>
+            Represents a DataGeneratedEventArgs object.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.Wpf.SignalProcessing.DataGeneratedStatus)">
+      <summary>
+            Constructor. Creates and initializes a new instance of this class.
+            </summary>
+      <param name="samples">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>samples</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.Wpf.SignalProcessing.DataGeneratedStatus)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="firstSampleTimeStamp">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>firstSampleTimeStamp</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.Wpf.SignalProcessing.DataGeneratedStatus)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="status">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>status</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DataGeneratedEventArgs.#ctor(System.Double[][],System.Double,Arction.Wpf.SignalProcessing.DataGeneratedStatus)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.DataGeneratedEventArgs.FirstSampleTimeStamp">
+      <summary>
+            Timestamp when a first sample occured.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.DataGeneratedEventArgs.Samples">
+      <summary>
+            Array of samples.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.DataGeneratedEventArgs.Status">
+      <summary>
+            Status of generated data.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.DataGeneratedEventHandler">
+      <summary>
+            Data generation event.
+            </summary>
+      <param name="args"></param>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.DataGeneratedStatus">
+      <summary>
+            Enumeration of data generated statuses.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.DataGeneratedStatus.Ok">
+      <summary>
+            Format is valid.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.DataGeneratedStatus.UnknownError">
+      <summary>
+            Format is invalid.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.DataSource">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Wpf.SignalProcessing.DataSource</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.DataSource.GetDataSource(System.Object)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DataSource.GetDataSource(System.Object)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="obj">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>obj</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DataSource.GetDataSource(System.Object)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DataSource.GetDataSource(System.Object)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.DataSource.ViewModelResourceKey">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:Arction.Wpf.SignalProcessing.DataSource.ViewModelResourceKey</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.DelegateCommand">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Wpf.SignalProcessing.DelegateCommand</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.DelegateCommand.#ctor(System.Action{System.Object})">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.Wpf.SignalProcessing.DelegateCommand</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="execute">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>execute</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DelegateCommand.#ctor(System.Action{System.Object})</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.DelegateCommand.#ctor(System.Action{System.Object},System.Predicate{System.Object})">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.Wpf.SignalProcessing.DelegateCommand</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="execute">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>execute</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DelegateCommand.#ctor(System.Action{System.Object},System.Predicate{System.Object})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="canExecute">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>canExecute</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DelegateCommand.#ctor(System.Action{System.Object},System.Predicate{System.Object})</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.DelegateCommand.CanExecute(System.Object)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DelegateCommand.CanExecute(System.Object)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="parameter">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>parameter</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DelegateCommand.CanExecute(System.Object)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DelegateCommand.CanExecute(System.Object)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.DelegateCommand.CanExecuteChanged">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.DelegateCommand.CanExecuteChanged</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.DelegateCommand.Execute(System.Object)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DelegateCommand.Execute(System.Object)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="parameter">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>parameter</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DelegateCommand.Execute(System.Object)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.DelegateCommand.Finalize">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DelegateCommand.Finalize</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.DelegateCommand.RaiseCanExecuteChanged">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.DelegateCommand.RaiseCanExecuteChanged</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.EndOfFileEventHandler">
+      <summary>
+            Read end of file event.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.FilterRoutines">
+      <summary>
+            Static methods for signal filtering
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FilterRoutines.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.Wpf.SignalProcessing.FilterRoutines</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FilterRoutines.MovingAverage(System.Double[],System.Int32)">
+      <summary>
+            Moving (floating) average. Smoothens the given data by calculating an average based on used value and its neighbor values.
+            </summary>
+      <param name="values">Input values</param>
+      <param name="windowLength">Averaging window length. Calculates output as average of each value and neighbors in range - windowLength / 2...+ windowLength / 2</param>
+      <returns>Filtered data</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FilterRoutines.SetDeploymentKey(System.String)">
+      <summary>
+            Sets deployment key.
+            </summary>
+      <param name="deploymentKey">LightningChart deployment key</param>
+      <exception cref="T:System.ArgumentException"></exception>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.FIRFilter">
+      <summary>
+            Finite Impulse Response (FIR) filter
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FIRFilter.#ctor">
+      <summary>
+            Filter constructor
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FIRFilter.#ctor(System.Double[])">
+      <summary>
+            Filter constructor.
+            </summary>
+      <param name="factors">Filter factor table.</param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.FIRFilter.CanOutput">
+      <summary>
+            This is set true by the filter after at least samples of delay have been fed to filter. 
+            The delay is the filter tap factor length / 2. 
+            This is a public variable because of performance reasons. 
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FIRFilter.FilterData(System.Double,System.Double@)">
+      <summary>
+            Filters a single data value.
+            </summary>
+      <param name="value">Value to be filtered.</param>
+      <param name="filteredValue">Filtered value.</param>
+      <returns>True if filtering was successful</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FIRFilter.FilterData(System.Double[],System.Double[]@,System.Int32)">
+      <summary>
+            Filters an array of data.
+            Cannot be used inside Paraller.For loop.
+            </summary>
+      <param name="data">Array of data to be filtered.</param>
+      <param name="filteredData">Filtered data</param>
+      <param name="countout">Smooth start</param>
+      <returns>True if filtering was successful</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FIRFilter.GetDelay">
+      <summary>
+            Get delay of filter as samples.
+            </summary>
+      <returns>Delay in samples.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FIRFilter.GetFactors">
+      <summary>
+            Gets the array of filter factors.
+            </summary>
+      <returns>Factor array</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FIRFilter.Reset">
+      <summary>
+            Reset filter internal delay line and states. 
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FIRFilter.SetFactors(System.Double[])">
+      <summary>
+            Sets factors for the filter.
+            </summary>
+      <param name="factors">Array of factors</param>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs">
+      <summary>
+            Represents a FrequencySineSweepChangedEventArgs object.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)">
+      <summary>
+            Constructor. Creates and initializes a new instance of this class.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequencyFrom">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequencyFrom</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequencyTo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequencyTo</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="durationMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>durationMs</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.#ctor(System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.DurationMs">
+      <summary>
+            Duration.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.FrequencyFrom">
+      <summary>
+            Beginning of the frequency range.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.FrequencyTo">
+      <summary>
+            End of the frequency range.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.FrequencySineSweepChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent">
+      <summary>
+            Sine frequency sweep waveform component. Runs with constant amplitude, from frequency to another, during given duration.
+            Then jumps to start starting frequency again. 
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.#ctor(Arction.Wpf.SignalProcessing.FrequencySineSweepComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.Amplitude">
+      <summary>
+            Amplitude of sine sweep
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.CreateCopy">
+      <summary>
+            Create a copy of frequency sine sweep component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.DurationMs">
+      <summary>
+            Duration of sine sweep in ms. Runs from starting frequency to end frequency during this duration. 
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.Enabled">
+      <summary>
+            Is the sweep component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.FrequencyFrom">
+      <summary>
+            Start frequency of sine sweep.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.FrequencyTo">
+      <summary>
+            End frequency of sine sweep.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.Offset">
+      <summary>
+            Offset of sine sweep
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.FrequencySineSweepComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.IDataSource">
+      <summary>
+            Data source interface.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.IDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)">
+      <summary>
+            Connect data source.
+            </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="dataGenerated">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dataGenerated</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="started">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>started</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="stopped">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>stopped</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.IDataSource.DataGenerated">
+      <summary>
+            Data generation event.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.IDataSource.Disconnect(System.Object)">
+      <summary>
+            Disconnect data source.
+            </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IDataSource.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IDataSource.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.IDataSource.Started">
+      <summary>
+            Start event.
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.IDataSource.Stopped">
+      <summary>
+            Stop event.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.IFileDataSource">
+      <summary>
+            File data source interface.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)">
+      <summary>
+            Connect to source.
+            </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="dataGenerated">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dataGenerated</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="started">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>started</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="stopped">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>stopped</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="endOfFile">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endOfFile</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="markerRead">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>markerRead</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IFileDataSource.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.IFileDataSource.EndOfFile">
+      <summary>
+            Read end of file event.
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.IFileDataSource.MarkerRead">
+      <summary>
+            Marker read event.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.IIRFilter">
+      <summary>
+            Infinite Impulse Response (IIR) filter
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.IIRFilter.#ctor">
+      <summary>
+            Constructor
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.IIRFilter.#ctor(System.Double[],System.Double,System.Double)">
+      <summary>
+            Filter constructor.
+            </summary>
+      <param name="filterNumsAndDenoms">Filter factor table. 
+            <param name="unstableOutputLimitMin">Minimum value allowed for the output</param><param name="unstableOutputLimitMax">Maximum value allowed for the output. 
+            If the output value is not withing the range, filtering methods return UnstableIIR status</param>
+            The first half contains numerators and the second half denominators.</param>
+      <param name="unstableOutputLimitMin">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>unstableOutputLimitMin</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IIRFilter.#ctor(System.Double[],System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="unstableOutputLimitMax">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>unstableOutputLimitMax</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IIRFilter.#ctor(System.Double[],System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.IIRFilter.#ctor(System.Double[],System.Double[],System.Double,System.Double,System.Double)">
+      <summary>
+            Makes an IIR filter from coefficients. H(z) = B(z)/A(z).
+            </summary>
+      <param name="coeffNumerators">B factors</param>
+      <param name="coeffDenominators">A factors</param>
+      <param name="unstableOutputLimitMin">Unstable output limit minimum</param>
+      <param name="unstableOutputLimitMax">Unstable output limit maximum</param>
+      <param name="gain">Gain for the filter</param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.IIRFilter.FilterData(System.Double[],System.Double[]@)">
+      <summary>
+            Filters an array of data.
+            Cannot be used inside Paraller.For loop
+            </summary>
+      <param name="data">Array to be filtered.</param>
+      <param name="filteredData">Filtered data</param>
+      <returns>False if unstable filter, otherwise true</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.IIRFilter.Reset">
+      <summary>
+            Resets the internal filtering buffers. 
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.IIRFilter.SetABFactors(System.Double[],System.Double[],System.Double,System.Double,System.Double)">
+      <summary>
+            Makes an IIR filter from coefficients. H(z) = B(z)/A(z).
+            </summary>
+      <param name="coeffNumerators">B factors</param>
+      <param name="coeffDenominators">A factors</param>
+      <param name="unstableOutputLimitMin">Unstable output limit minimum</param>
+      <param name="unstableOutputLimitMax">Unstable output limit maximum</param>
+      <param name="gain">Gain for the filter</param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.IIRFilter.SetFactors(System.Double[],System.Double,System.Double)">
+      <summary>
+            Sets factors for the filter.
+            </summary>
+      <param name="filterNumsAndDenoms">Factor array of nums and denoms</param>
+      <param name="unstableOutputLimitMin">Unstable output limit minimum</param>
+      <param name="unstableOutputLimitMax">Unstable output limit maximum</param>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.InverseBooleanConverter">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Wpf.SignalProcessing.InverseBooleanConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.Wpf.SignalProcessing.InverseBooleanConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="targetType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>targetType</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="parameter">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>parameter</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="culture">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>culture</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="targetType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>targetType</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="parameter">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>parameter</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="culture">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>culture</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.InverseBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.ISampledDataSource">
+      <summary>
+            Sampeled data source.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.IWaveFormComponent">
+      <summary>
+            Waveform component interface.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.IWaveFormComponent.CreateCopy">
+      <summary>
+            Create copy of object. Interface method.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.IWaveFormComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.IWaveFormComponent.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.IWaveFormComponent.PropertyChanged">
+      <summary>
+            Event. Occures when property is changed.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.MarkerReadEventArgs">
+      <summary>
+            Represents a MarkerReadEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.MarkerReadEventArgs.#ctor(System.Int32,System.Double)">
+      <summary>
+            Event constructor.Creates and initializes a new instance of this event.
+            </summary>
+      <param name="markerType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>markerType</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.MarkerReadEventArgs.#ctor(System.Int32,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="timeStamp">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>timeStamp</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.MarkerReadEventArgs.#ctor(System.Int32,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.MarkerReadEventArgs.MarkerType">
+      <summary>
+            Type of a marker.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.MarkerReadEventArgs.TimeStamp">
+      <summary>
+            Timestamp when a certain event occured.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.MarkerReadEventHandler">
+      <summary>
+            Marker read event.
+            </summary>
+      <param name="args"></param>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.PlaybackDeviceInfo">
+      <summary>
+            Represents playback device info.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.PlaybackDeviceInfo.#ctor(System.String,System.Guid,System.String)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="description">Playback device description.</param>
+      <param name="driverId">Playback device id.</param>
+      <param name="moduleName">Playback device module name.</param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.PlaybackDeviceInfo.Description">
+      <summary>
+            Playback device description.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.PlaybackDeviceInfo.DriverGuid">
+      <summary>
+            Playback device id.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.PlaybackDeviceInfo.Equals(System.Object)">
+      <summary>
+            Determines whether the specified PlaybackDeviceInfo object has the same id as the current PlaybackDeviceInfo object.
+            </summary>
+      <param name="obj">PlaybackDeviceInfo object to compare with the current object.</param>
+      <returns>true if the specified PlaybackDeviceInfo has the same id as the current PlaybackDeviceInfo object; otherwise, false.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.PlaybackDeviceInfo.GetHashCode">
+      <summary>
+            Serves as a hash function for the current object.
+            </summary>
+      <returns>A hash code for the current object.</returns>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.PlaybackDeviceInfo.ModuleName">
+      <summary>
+            Playback device module name.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.PlaybackDeviceInfo.ToString">
+      <summary>
+            Returns a string that represents the current object.
+            </summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.RandomNoiseChangedEventArgs">
+      <summary>
+            Represents a RandomNoiseChangedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)">
+      <summary>
+            Creates and initializes a new instance of this class.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.RandomNoiseChangedEventArgs.#ctor(System.Double,System.Boolean,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.RandomNoiseChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.RandomNoiseChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.RandomNoiseChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.RandomNoiseChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.RandomNoiseComponent">
+      <summary>
+            Random noise waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.RandomNoiseComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.RandomNoiseComponent.#ctor(Arction.Wpf.SignalProcessing.RandomNoiseComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.RandomNoiseComponent.Amplitude">
+      <summary>
+            Amplitude of random noise component. 
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.RandomNoiseComponent.CreateCopy">
+      <summary>
+            Create a copy of random noise component. 
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.RandomNoiseComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.RandomNoiseComponent.Enabled">
+      <summary>
+            Is the random noise component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.RandomNoiseComponent.GetRandomValue">
+      <summary>
+            Get random value, using offset and amplitude 
+            </summary>
+      <returns>Random value, in range -Amplitude+Offset ... +Amplitude+Offset</returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.RandomNoiseComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.RandomNoiseComponent.Offset">
+      <summary>
+            Offset of random noise component
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.RandomNoiseComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.RandomNoiseComponent.ToString">
+      <summary>
+            Convert class description to string.
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.RecordingDeviceInfo">
+      <summary>
+            Represents recording device info.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.RecordingDeviceInfo.#ctor(System.String,System.Guid,System.String)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="description">Recording device description.</param>
+      <param name="driverId">Recording device id.</param>
+      <param name="moduleName">Recording device module name.</param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.RecordingDeviceInfo.Description">
+      <summary>
+            Recording device description.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.RecordingDeviceInfo.DriverGuid">
+      <summary>
+            Recording device id.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.RecordingDeviceInfo.Equals(System.Object)">
+      <summary>
+            Determines whether the specified RecordingDeviceInfo has the same id as the current RecordingDeviceInfo object.
+            </summary>
+      <param name="obj">RecordingDeviceInfo object to compare with the current object.</param>
+      <returns>true if the specified RecordingDeviceInfo has the same id as the current RecordingDeviceInfo object; otherwise, false.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.RecordingDeviceInfo.GetHashCode">
+      <summary>
+            Serves as a hash function for the current object.
+            </summary>
+      <returns>A hash code for the current object.</returns>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.RecordingDeviceInfo.ModuleName">
+      <summary>
+            Recording device module name.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.RecordingDeviceInfo.ToString">
+      <summary>
+            Returns a string that represents the current object.
+            </summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SelectedPage">
+      <summary>
+            Active page that is shown in the UI
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SelectedPage.Sines">
+      <summary>
+            Sine waveforms
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SelectedPage.Squares">
+      <summary>
+            Squares
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SelectedPage.Triangles">
+      <summary>
+            Triangles
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SelectedPage.RandomNoises">
+      <summary>
+            Random noises
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SelectedPage.FrequencySineSweeps">
+      <summary>
+            Frequency sine sweeps
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SelectedPage.AmplitudeSineSweeps">
+      <summary>
+            Amplitude sine sweeps
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SelectedPage.All">
+      <summary>
+            All
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SignalGenerator">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Wpf.SignalProcessing.SignalGenerator</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalGenerator.#ctor">
+      <summary>
+             Creates and initializes a new instance of SignalGenerator class.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="dataGenerated">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dataGenerated</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="started">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>started</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="stopped">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>stopped</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.SignalGenerator.DataGenerated">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.SignalGenerator.DataGenerated</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalGenerator.Disconnect(System.Object)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.Factor">
+      <summary>
+            Get or sets a general factor for output signal. Allows using e.g. millivolt range by setting this 0.001, or 1E-3. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.FactorProperty">
+      <summary>
+            Identifies the Factor dependency property.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalGenerator.Finalize">
+      <summary>
+            Finalizer.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalGenerator.GenerateBlock(System.Int32)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.GenerateBlock(System.Int32)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="sampleCount">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>sampleCount</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.GenerateBlock(System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.GenerateBlock(System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.GeneratorName">
+      <summary>
+            Gets or sets the name of this signal generator. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.GeneratorNameProperty">
+      <summary>
+            Identifies the GeneratorName dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.IsGeneratorEnabled">
+      <summary>
+            Gets or sets the state of this generator (enabled or not). This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.IsGeneratorEnabledProperty">
+      <summary>
+            Identifies the IsGeneratorEnabled dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.MasterGenerator">
+      <summary>
+            Master generator. Several generators can be combined together to produce a synchronized multi-channel output data stream. 
+            Master sets the sampling frequency for each slave generator and combines the samples from each slave to master's output data stream.
+            Set this null if this is a master generator. 
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.MasterGeneratorProperty">
+      <summary>
+            Identifies the MasterGenerator dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.MultiCoreProcessing">
+      <summary>
+            Gets or sets whether multi-core processing is enabled. If enabled, computes the signal in multiple threads. 
+            Enables faster rendering when CPU has more cores than 1. Only certain parts of chart are multicore optimized. 
+            This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.MultiCoreProcessingProperty">
+      <summary>
+            Identifies the MultiCoreProcessing dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.OutputInterval">
+      <summary>
+            Gets or sets the output interval of this generator in milliseconds. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.OutputIntervalProperty">
+      <summary>
+            Identifies the OutputIntervalMs dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.SamplingFrequency">
+      <summary>
+            Gets or sets the sampling frequency, i.e. the number of output points generated per second. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.SamplingFrequencyProperty">
+      <summary>
+            Identifies the SamplingFrequency dependency property.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalGenerator.SetDeploymentKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="deploymentKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>deploymentKey</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalGenerator.SetUwpDeveloperKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.SetUwpDeveloperKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="uwpdeveloperkey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>uwpdeveloperkey</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.SetUwpDeveloperKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalGenerator.Start">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.Start</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.SignalGenerator.Started">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.SignalGenerator.Started</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.SignalGenerator.Stopped">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.SignalGenerator.Stopped</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalGenerator.StopRequest">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalGenerator.StopRequest</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.ThreadInvoking">
+      <summary>
+            Built-in invoking to UI thread when using ThreadType = Thread. 
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.ThreadInvokingProperty">
+      <summary>
+            Identifies the ThreadInvoking dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.ThreadType">
+      <summary>
+            Gets or sets the way how data is generated. Generates data either by using a thread or a main UI thread synchronized timer.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.ThreadTypeProperty">
+      <summary>
+            Identifies the ThreadType dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformAmplitudeSweepSines">
+      <summary>
+            Get or sets sine sweep amplitude component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformAmplitudeSweepSinesProperty">
+      <summary>
+            Identifies the WaveformAmplitudeSweepSinesProperty dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformFrequencySweepSines">
+      <summary>
+            Get or sets sine sweep amplitude component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformFrequencySweepSinesProperty">
+      <summary>
+            Identifies the WaveformFrequencySweepSinesProperty dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformRandomNoises">
+      <summary>
+            Get or sets random noise waveform component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformRandomNoisesProperty">
+      <summary>
+            Identifies the WaveformRandomNoises dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformSines">
+      <summary>
+            Get or sets sine waveform component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformSinesProperty">
+      <summary>
+            Identifies the WaveformSines dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformSquares">
+      <summary>
+            Get or sets square waveform component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformSquaresProperty">
+      <summary>
+            Identifies the WaveformSquares dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformTriangles">
+      <summary>
+            Get or sets triangle waveform component collection. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalGenerator.WaveformTrianglesProperty">
+      <summary>
+            Identifies the WaveformTriangles dependency property.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SignalReader">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Wpf.SignalProcessing.SignalReader</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalReader.#ctor">
+      <summary>
+            Creates and initializes a new instance of SignalReader class.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.BitsPerSample">
+      <summary>
+            Gets how many bits are for one sample.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.Caption">
+      <summary>
+            Gets/sets optional caption for signal reader. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.CaptionProperty">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:Arction.Wpf.SignalProcessing.SignalReader.CaptionProperty</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.ChannelCount">
+      <summary>
+            Gets channel count.  
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="dataGenerated">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dataGenerated</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="started">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>started</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="stopped">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>stopped</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="dataGenerated">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dataGenerated</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="started">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>started</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="stopped">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>stopped</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="endOfFile">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endOfFile</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="markerRead">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>markerRead</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Connect(System.Object,Arction.Wpf.SignalProcessing.DataGeneratedEventHandler,Arction.Wpf.SignalProcessing.StartedEventHandler,Arction.Wpf.SignalProcessing.StoppedEventHandler,Arction.Wpf.SignalProcessing.EndOfFileEventHandler,Arction.Wpf.SignalProcessing.MarkerReadEventHandler)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.SignalReader.DataGenerated">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.SignalReader.DataGenerated</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalReader.Disconnect(System.Object)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Disconnect(System.Object)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.SignalReader.EndOfFile">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.SignalReader.EndOfFile</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.Factor">
+      <summary>
+            General factor for output signal. Allows using for example millivolt range by setting this 0.001, or 1E-3. This is a dependency propety.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.FactorProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.SignalReader.Factor dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.FileFilterString">
+      <summary>
+            Filter string for file open dialog.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.FileName">
+      <summary>
+            Gets/sets the name (full path) of the data file. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.FileNameProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.SignalReader.FileName dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.FileSize">
+      <summary>
+            Gets the size of the source file in bytes.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.IsLooping">
+      <summary>
+            Get/sets whether reading should continue from the beginning of the data file after end-of-file has been reached. Possible file header is skipped. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.IsLoopingProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.SignalReader.Looping dependency property.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.IsReaderEnabled">
+      <summary>
+            Get/sets whether this instance is running or not. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.IsReaderEnabledProperty">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:Arction.Wpf.SignalProcessing.SignalReader.IsReaderEnabledProperty</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.Length">
+      <summary>
+            Gets the length of the source file in samples (for each channel).
+            For some file formats, this is an estimate. 
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.SignalReader.MarkerRead">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.SignalReader.MarkerRead</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalReader.OpenFile(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.OpenFile(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="fileName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fileName</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.OpenFile(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.OpenFile(System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.OpenFileDialog">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:Arction.Wpf.SignalProcessing.SignalReader.OpenFileDialog</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.OutputInterval">
+      <summary>
+            Output interval in milliseconds. This is only the target value and not always accurate. This is a dependency property.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.OutputIntervalProperty">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:Arction.Wpf.SignalProcessing.SignalReader.OutputIntervalProperty</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalReader.ReadAllData(System.String,System.Int32@,System.Int32@,System.Double[][]@,Arction.Wpf.SignalProcessing.SignalReader.Marker[]@)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.ReadAllData(System.String,System.Int32@,System.Int32@,System.Double[][]@,Arction.Wpf.SignalProcessing.SignalReader.Marker[]@)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="fileName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fileName</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.ReadAllData(System.String,System.Int32@,System.Int32@,System.Double[][]@,Arction.Wpf.SignalProcessing.SignalReader.Marker[]@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="channelCount">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>channelCount</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.ReadAllData(System.String,System.Int32@,System.Int32@,System.Double[][]@,Arction.Wpf.SignalProcessing.SignalReader.Marker[]@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="samplingFrequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>samplingFrequency</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.ReadAllData(System.String,System.Int32@,System.Int32@,System.Double[][]@,Arction.Wpf.SignalProcessing.SignalReader.Marker[]@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="samples">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>samples</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.ReadAllData(System.String,System.Int32@,System.Int32@,System.Double[][]@,Arction.Wpf.SignalProcessing.SignalReader.Marker[]@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="markers">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>markers</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.ReadAllData(System.String,System.Int32@,System.Int32@,System.Double[][]@,Arction.Wpf.SignalProcessing.SignalReader.Marker[]@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.ReadAllData(System.String,System.Int32@,System.Int32@,System.Double[][]@,Arction.Wpf.SignalProcessing.SignalReader.Marker[]@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.SamplingFrequency">
+      <summary>
+            Gets sampling frequency. The count of output points calculated per second. 
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalReader.SetDeploymentKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="deploymentKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>deploymentKey</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalReader.Start">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.Start</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.SignalReader.Started">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.SignalReader.Started</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.SignalReader.Stopped">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.SignalReader.Stopped</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SignalReader.StopRequest">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SignalReader.StopRequest</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.ThreadInvoking">
+      <summary>
+            Gets/sets whether signal reader automatically synchronizes its event to the main UI thread. If ThreadType is ThreadType.Timer then setting ThreadInvoking has no effect.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.ThreadInvokingProperty">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:Arction.Wpf.SignalProcessing.SignalReader.ThreadInvokingProperty</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SignalReader.ThreadType">
+      <summary>
+            Gets/sets the way how data is generated. Generates data either using a thread or a main UI thread synchronized timer.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.ThreadTypeProperty">
+      <summary>
+            Identifies the Arction.Wpf.SignalProcessing.SignalReader.ThreadType dependency property.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SignalReader.FileFormat">
+      <summary>
+            Enumaration of file formats.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.FileFormat.Wav">
+      <summary>
+            WAV (filename extension *.wav).
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.FileFormat.Sid">
+      <summary>
+            SID (filename extension *.sid).
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.FileFormat.Ssd">
+      <summary>
+            SSD (filename extension *.ssd).
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SignalReader.Marker">
+      <summary>
+            Marker.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.Marker.TimeStamp">
+      <summary>
+            Time stamp.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.Marker.Type">
+      <summary>
+            Type.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SignalReader.OpenResult">
+      <summary>
+            Open result.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.OpenResult.OK">
+      <summary>
+            File opened successfully.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.OpenResult.SignalReaderRunning">
+      <summary>
+            Signal reader is running.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.OpenResult.FileNotAccessible">
+      <summary>
+            File is not accessible.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.OpenResult.UnknownExtension">
+      <summary>
+            The extension is not one of the supported ones.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.OpenResult.UnknownWaveFormat">
+      <summary>
+            WAV audio format must be PCM. Others will fail.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.OpenResult.LicenseError">
+      <summary>
+            Installed license does not allow using SignalReader
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SignalReader.ReadSampleBundlesStatus">
+      <summary>
+            Enumaration of defined types of read sample bundles.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.ReadSampleBundlesStatus.AllSamplesRead">
+      <summary>
+            Read all samples.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.ReadSampleBundlesStatus.SamplesPartiallyReadEndOfFile">
+      <summary>
+            Read samples partially, only end of file.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.ReadSampleBundlesStatus.SamplesPartiallyReadMarkerNext">
+      <summary>
+            Read samples partially, next marker.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.ReadSampleBundlesStatus.Marker">
+      <summary>
+            Read markers.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SignalReader.WavHeaderReadResult">
+      <summary>
+            Enumaration of defined validations of formats.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.WavHeaderReadResult.OK">
+      <summary>
+            Format is valid.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.WavHeaderReadResult.InvalidWavFormat">
+      <summary>
+            Format is invalid.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SignalReader.WavInfo">
+      <summary>
+            WAV audio format information.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.WavInfo.iByteRate">
+      <summary>
+            Byte rate.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.WavInfo.iSampleRate">
+      <summary>
+            Sample rate.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.WavInfo.sAudioFormat">
+      <summary>
+            Audio format.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.WavInfo.sBitsPerSample">
+      <summary>
+            Bits per second (bit/s).
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.WavInfo.sBlockAlign">
+      <summary>
+            Block align.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SignalReader.WavInfo.sChannels">
+      <summary>
+            Channels.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SineChangedEventArgs">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Wpf.SignalProcessing.SineChangedEventArgs</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)">
+      <summary>
+            Occures when parameters is changed. Initializes a new instance of sine component.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="delayMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>delayMs</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SineChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SineChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SineChangedEventArgs.DelayMs">
+      <summary>
+            Delay in milliseconds.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SineChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SineChangedEventArgs.Frequency">
+      <summary>
+            Frequency.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SineChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SineChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SineComponent">
+      <summary>
+            Sine waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SineComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SineComponent.#ctor(Arction.Wpf.SignalProcessing.SineComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SineComponent.Amplitude">
+      <summary>
+            Amplitude of sine component.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SineComponent.CreateCopy">
+      <summary>
+            Create a copy of sine component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SineComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SineComponent.DelayMs">
+      <summary>
+            Delay of sine component in ms.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SineComponent.Enabled">
+      <summary>
+            Is the sine component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SineComponent.Frequency">
+      <summary>
+            Frequency of sine component
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SineComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SineComponent.Offset">
+      <summary>
+            Offset of sine component
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.SineComponent.PropertyChanged">
+      <summary>
+            Event occures when property is changed.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SineComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SpectrumCalculator">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Wpf.SignalProcessing.SpectrumCalculator</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.#ctor">
+      <summary>
+            Creates and initializes a new instance of SpectrumCalculator class.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.CalculateBackward(System.Double[],System.Double[]@)">
+      <summary>
+            Calculates backwards FFT conversion. Converts frequency component data into signal sample data. 
+            </summary>
+      <param name="samples">Output signal samples</param>
+      <param name="fftData">Input FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.CalculateBackward(System.Single[],System.Single[]@)">
+      <summary>
+            Calculates backwards FFT conversion. Converts frequency component data into signal sample data. 
+            </summary>
+      <param name="samples">Output signal samples</param>
+      <param name="fftData">Input FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.CalculateForward(System.Double[],System.Double[]@)">
+      <summary>
+            Calculates FFT conversion. Converts signal data into frequency component data. 
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftData">Output FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.CalculateForward(System.Single[],System.Single[]@)">
+      <summary>
+            Calculates FFT conversion. Converts signal data into frequency component data. 
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftData">Output FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.Dispose">
+      <summary>
+            Disposes unmanaged resources.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.Finalize">
+      <summary>
+            Finalizer.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.PowerSpectrum(System.Double[],System.Double[]@)">
+      <summary>
+            Calculates power spectrum, having all FFT data in absolute values.  
+            The count of output FFT data is same than input data. 
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftData">Output FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.PowerSpectrum(System.Single[],System.Single[]@)">
+      <summary>
+            Calculates power spectrum, having all FFT data in absolute values.  
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftData">Output FFT data</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.PowerSpectrumOverlapped(System.Double[],System.Int32,System.Double,System.Double[]@,System.Int32@)">
+      <summary>
+            Calculates power spectrum, having all FFT data in absolute values. Overlaps moving FFT window until all data is processed. 
+            The count of output FFT data is same than input data. 
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftWindowLength">Length of moving calculation window.</param>
+      <param name="overlapPercent">Overlapping percent. Moving FFT window is shifted by this amount for next calculation round. Valid values are 0...99</param>
+      <param name="fftData">Output FFT data. Length equals fftWindowLenght. If samples length is less than fftWindowLength, outputs samples length of data.</param>
+      <param name="processedSampleCount">Processed sample count. It is possible that all samples are not processed from the end, if there's not enough data for last FFT window.</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.PowerSpectrumOverlapped(System.Single[],System.Int32,System.Double,System.Single[]@,System.Int32@)">
+      <summary>
+            Calculates power spectrum, having all FFT data in absolute values. Overlaps moving FFT window until all data is processed. 
+            The count of output FFT data is same than input data. 
+            </summary>
+      <param name="samples">Signal samples</param>
+      <param name="fftWindowLength">Length of moving calculation window.</param>
+      <param name="overlapPercent">Overlapping percent. Moving FFT window is shifted by this amount for next calculation round. Valid values are 0...99</param>
+      <param name="fftData">Output FFT data. Length equals fftWindowLenght. If samples length is less than fftWindowLength, outputs samples length of data.</param>
+      <param name="processedSampleCount">Processed sample count. It is possible that all samples are not processed from the end, if there's not enough data for last FFT window.</param>
+      <returns>True if successful, else False.</returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.SetDeploymentKey(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SpectrumCalculator.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="deploymentKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>deploymentKey</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SpectrumCalculator.SetDeploymentKey(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SpectrumCalculator.System#Windows#IWeakEventListener#ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SpectrumCalculator.System#Windows#IWeakEventListener#ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="managerType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>managerType</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SpectrumCalculator.System#Windows#IWeakEventListener#ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="sender">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>sender</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SpectrumCalculator.System#Windows#IWeakEventListener#ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SpectrumCalculator.System#Windows#IWeakEventListener#ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SpectrumCalculator.System#Windows#IWeakEventListener#ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SquareChangedEventArgs">
+      <summary>
+            Represents a SquareChangedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)">
+      <summary>
+            Occures when parameters is changed. Initializes a new instance of square waveform component.
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="delayMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>delayMs</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="symmetry">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>symmetry</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Guid,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.DelayMs">
+      <summary>
+            Delay in milliseconds.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.Frequency">
+      <summary>
+            Frequency.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.Id">
+      <summary>
+            Id.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.Offset">
+      <summary>
+            Offset.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.SquareChangedEventArgs.Symmetry">
+      <summary>
+            Symmetry.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.SquareComponent">
+      <summary>
+            Square waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SquareComponent.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.Wpf.SignalProcessing.SquareComponent</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SquareComponent.#ctor(Arction.Wpf.SignalProcessing.SquareComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SquareComponent.#ctor(Arction.Wpf.SignalProcessing.SquareComponent)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SquareComponent.Amplitude">
+      <summary>
+            Amplitude of square component.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SquareComponent.CreateCopy">
+      <summary>
+            Create a copy of square component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.SquareComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SquareComponent.DelayMs">
+      <summary>
+            Delay of square component in ms.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SquareComponent.Enabled">
+      <summary>
+            Is the square component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SquareComponent.Frequency">
+      <summary>
+            Frequency of square component
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SquareComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SquareComponent.Offset">
+      <summary>
+            Offset of square component
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.SquareComponent.PropertyChanged">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.SquareComponent.PropertyChanged</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.SquareComponent.Symmetry">
+      <summary>
+            Square wave symmetry. Valid range is 0...1.
+            If symmetry is &lt; 0.5, the 'low'stage of noise wave is longer than 'high' stage. 
+            Vice versa, value &gt; 0.5 makes the 'high' stage longer
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.SquareComponent.ToString">
+      <summary>
+            Convert class description to string.
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.StartedEventArgs">
+      <summary>
+            Represents a StartedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)">
+      <summary>
+            Event constructor. Creates and initializes a new instance of this event.
+            </summary>
+      <param name="samplesPerSecond">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>samplesPerSecond</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="bitsPerSample">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>bitsPerSample</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="channelCount">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>channelCount</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StartedEventArgs.#ctor(System.Double,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.StartedEventArgs.BitsPerSample">
+      <summary>
+            Read bits per sample.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.StartedEventArgs.ChannelCount">
+      <summary>
+            Channel counter.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.StartedEventArgs.SamplesPerSecond">
+      <summary>
+            Read samples per second.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.StartedEventHandler">
+      <summary>
+            Start event.
+            </summary>
+      <param name="args"></param>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.StoppedEventHandler">
+      <summary>
+            Stop event.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.StringToDoubleConverter">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:Arction.Wpf.SignalProcessing.StringToDoubleConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.Wpf.SignalProcessing.StringToDoubleConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="targetType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>targetType</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="parameter">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>parameter</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="culture">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>culture</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="targetType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>targetType</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="parameter">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>parameter</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="culture">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>culture</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.StringToDoubleConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.ThreadType">
+      <summary>
+            Threading type
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.ThreadType.Thread">
+      <summary>
+            Use thread.
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.ThreadType.Timer">
+      <summary>
+            Use timer.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs">
+      <summary>
+            Represents a TriangleChangedEvent object.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)">
+      <summary>
+            Occures when parameters is changed. Initializes a new instance of triangle component
+            </summary>
+      <param name="amplitude">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>amplitude</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="delayMs">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>delayMs</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="enabled">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>enabled</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="frequency">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>frequency</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="symmetry">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>symmetry</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.#ctor(System.Double,System.Double,System.Boolean,System.Double,System.Double,System.Guid,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.Amplitude">
+      <summary>
+            Amplitude
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.DelayMs">
+      <summary>
+            Delay in milliseconds
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.Enabled">
+      <summary>
+            Enabled or not
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.Frequency">
+      <summary>
+            Frequency
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.Id">
+      <summary>
+            Id
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.Offset">
+      <summary>
+            Offset
+            </summary>
+    </member>
+    <member name="F:Arction.Wpf.SignalProcessing.TriangleChangedEventArgs.Symmetry">
+      <summary>
+            Symmetry
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.TriangleComponent">
+      <summary>
+            Triangle waveform component
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.TriangleComponent.#ctor">
+      <summary>
+            Default constructor.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.TriangleComponent.#ctor(Arction.Wpf.SignalProcessing.TriangleComponent)">
+      <summary>
+            Copy constructor.
+            </summary>
+      <param name="source">Source object.</param>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.TriangleComponent.Amplitude">
+      <summary>
+            Amplitude of triangle component.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.TriangleComponent.CreateCopy">
+      <summary>
+            Create copy of triangle component.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Arction.Wpf.SignalProcessing.TriangleComponent.CreateCopy</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.TriangleComponent.DelayMs">
+      <summary>
+            Delay of triangle component in ms.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.TriangleComponent.Enabled">
+      <summary>
+            Is the triangle component included in calculation of the output signal
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.TriangleComponent.Frequency">
+      <summary>
+            Frequency of triangle component
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.TriangleComponent.Id">
+      <summary>
+            Gets or sets the unique identifier of this instance.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.TriangleComponent.Offset">
+      <summary>
+            Offset of triangle component
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.TriangleComponent.PropertyChanged">
+      <summary>
+            Occurs when property is changed.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.TriangleComponent.Symmetry">
+      <summary>
+            Triangle wave symmetry. Valid range is 0...1.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.TriangleComponent.ToString">
+      <summary>
+            Convert class description to string 
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.Gui.AudioInput">
+      <summary>
+            Interaction logic for AudioInput.xaml.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.Gui.AudioInput.#ctor">
+      <summary>
+            Default constructor. Creates and initializes a new instance of AudioInput class.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.Gui.AudioInput.InitializeComponent">
+      <summary>
+            InitializeComponent
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.Gui.AudioInput.Input">
+      <summary>
+            Gets or sets AudioInput component that this GUI component controls.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.Gui.AudioOutput">
+      <summary>
+            This class provides a GUI for Arction.Wpf.SignalProcessing.AudioOutput 
+            object which can be accessed through Output or DataContext property.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.Gui.AudioOutput.#ctor">
+      <summary>
+            Default constructor. Creates and initializes a new instance of 
+            Arction.Wpf.SignalProcessing.Gui.AudioOutput class.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.Gui.AudioOutput.InitializeComponent">
+      <summary>
+            InitializeComponent
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.Gui.AudioOutput.Output">
+      <summary>
+            Gets or sets AudioOutput component that this GUI component controls.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.Gui.SignalGenerator">
+      <summary>
+            Interaction logic for SignalGenerator.xaml.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.Gui.SignalGenerator.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.Wpf.SignalProcessing.Gui.SignalGenerator</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.Gui.SignalGenerator.Generator">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:Arction.Wpf.SignalProcessing.Gui.SignalGenerator.Generator</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.Gui.SignalGenerator.InitializeComponent">
+      <summary>
+            InitializeComponent
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.Gui.SignalGenerator.SelectedPage">
+      <summary>
+            Gets or sets selected page in UI.
+            </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.Gui.SignalGenerator.SelectedPageIndex">
+      <summary>
+            Gets or sets selected page index in UI.
+            </summary>
+    </member>
+    <member name="T:Arction.Wpf.SignalProcessing.Gui.SignalReader">
+      <summary>
+            Interaction logic for SignalReader.xaml.
+            </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.Gui.SignalReader.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Arction.Wpf.SignalProcessing.Gui.SignalReader</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.Gui.SignalReader.DataGenerated">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.Gui.SignalReader.DataGenerated</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.Gui.SignalReader.EndOfFile">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.Gui.SignalReader.EndOfFile</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Arction.Wpf.SignalProcessing.Gui.SignalReader.InitializeComponent">
+      <summary>
+            InitializeComponent
+            </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.Gui.SignalReader.MarkerRead">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.Gui.SignalReader.MarkerRead</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Arction.Wpf.SignalProcessing.Gui.SignalReader.Reader">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:Arction.Wpf.SignalProcessing.Gui.SignalReader.Reader</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.Gui.SignalReader.Started">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.Gui.SignalReader.Started</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="E:Arction.Wpf.SignalProcessing.Gui.SignalReader.Stopped">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>E:Arction.Wpf.SignalProcessing.Gui.SignalReader.Stopped</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+  </members>
+</doc>
