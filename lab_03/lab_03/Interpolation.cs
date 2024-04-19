@@ -34,6 +34,13 @@ namespace lab_03
             ERR_NZ_VALUE = 12,
         };
 
+        public static void add_smth(ref int x, ref int y, ref int z)
+        {
+            x += 100;
+            y += 100;
+            z += 100;
+        }
+
         public static bool n_x_needed = true;
         public static int n_x = 4;
         public static bool n_y_needed = true;
@@ -57,7 +64,7 @@ namespace lab_03
              * -0,152
              * 1,141
              * 1,43
-             *  должно быть примерно -0,41
+             *  должно быть примерно 0,48
              */
 
             /*double start_x = -5;
@@ -71,15 +78,16 @@ namespace lab_03
             int steps_z = 130;*/
             double start_x = -5;
             double end_x = 5;
-            int steps_x = 120;
+            int steps_x = 20;
             double start_y = -3;
             double end_y = 4;
-            int steps_y = 150;
+            int steps_y = 50;
             double start_z = -1;
             double end_z = 2;
-            int steps_z = 130;
+            int steps_z = 30;
 
 
+            add_smth(ref steps_x, ref steps_y, ref steps_z);
             function_values = new List<List<double>>[steps_z];
 
             x = new double[steps_x];
@@ -109,65 +117,72 @@ namespace lab_03
 
         public static List<List<double>>[] function_values = new List<List<double>>[N];
 
-        private delegate double function_generator(double x, double y, double z);
+        public static function_generator func;
 
-        private static double func_squares(double x, double y, double z)
+        public delegate double function_generator(double x, double y, double z);
+
+        public static double func_squares(double x, double y, double z)
         {
             return Math.Pow(x, 2) + Math.Pow(y, 2) + Math.Pow(z, 2);
         }
 
-        private static double func_squares_strange(double x, double y, double z)
+        public static double func_squares_strange(double x, double y, double z)
         {
             return (-1)*Math.Pow(x, 2) + Math.Pow(y, 2) + Math.Pow(z, 2);
         }
-        private static double func_squares_strange_y(double x, double y, double z)
+        public static double func_squares_strange_y(double x, double y, double z)
         {
             return Math.Pow(x, 2) - Math.Pow(y, 2) + Math.Pow(z, 2);
         }
 
-        private static double func_shahnovich(double x, double y, double z)
+        public static double func_shahnovich(double x, double y, double z)
         {
-            if (Math.Abs(x + y) < 1e-8)
-                return 1e8;
-            return 1/(x + y) - z;
+            if (Math.Abs(x + y) < 1e-10)
+                return 1e6;
+            return 1 / (x + y) - z;
         }
 
-        private static double func_lobach(double x, double y, double z)
+        public static double func_lobach(double x, double y, double z)
         {
-            return Math.Exp(2 * x - y) * Math.Pow(z, 2);
+            return Math.Exp(2 * x - y) * z;
         }
 
-        private static double func_center(double x, double y, double z)
+        public static double func_xyz(double x, double y, double z)
+        {
+            return x * y * z;
+        }
+
+        public static double func_center(double x, double y, double z)
         {
             return 1 / Math.Abs(x - 2 - double.Epsilon) + 1 / Math.Abs(y - 2 - double.Epsilon) + 1 / Math.Abs(z - 2 - double.Epsilon);
         }
 
-        private static double func_linear(double x, double y, double z)
+        public static double func_linear(double x, double y, double z)
         {
             return x + y + z;
         }
 
-        private static double func_without_z(double x, double y, double z)
+        public static double func_without_z(double x, double y, double z)
         {
             return x + y;
         }
 
-        private static double func_bool(double x, double y, double z)
+        public static double func_bool(double x, double y, double z)
         {
             return (x > y ? 1 : 0) + (x > z ? 1 : 0);
         }
 
-        private static double func_changed(double x, double y, double z)
+        public static double func_changed(double x, double y, double z)
         {
             return (x > y ? x : z);
         }
 
-        private static double func_linear_strange(double x, double y, double z)
+        public static double func_linear_strange(double x, double y, double z)
         {
             return x - y + z;
         }
 
-        private static double func_kozyrnov(double x, double y, double z)
+        public static double func_kozyrnov(double x, double y, double z)
         {
             return Math.Pow(x, 2) + Math.Pow(y, 3) + Math.Sqrt(z);
         }
@@ -294,15 +309,22 @@ namespace lab_03
             /*function_generator func = new function_generator(func_without_z);*/
             /*function_generator func = new function_generator(func_bool);*/
             /*function_generator func = new function_generator(func_changed);*/
-            function_generator func = new function_generator(func_lobach);
-            
+            /*function_generator func = new function_generator(func_lobach);*/
 
-/*function_generator func = new function_generator(func_shahnovich);*/
+
+            func = new function_generator(func_shahnovich);
 
 
             int rc = fill_function_values(func, use_arrs);
-            if (rc == (int)rcodes.OK)
-                print_function_values(use_arrs);
+
+            Console.Write("x: ");
+            foreach (var val in x)
+            {
+                Console.Write($"{val}\t");
+            }
+            Console.Write("\n");
+            /*if (rc == (int)rcodes.OK)
+                print_function_values(use_arrs);*/
         }
 
 

@@ -144,6 +144,18 @@ namespace lab_03
             var workingTable = GetWorkingPoints(GetIndex(x), n);
             var subs = NewtonMethod(workingTable);
 
+            /*#region "debug subs print"
+            Console.WriteLine($"x = {x}");
+            foreach (var row in subs)
+            {
+                foreach (double num in row)
+                {
+                    Console.Write($"{num}\t");
+                }
+                Console.Write($"\n");
+            }
+            #endregion*/
+
 
             double sum;
             sum = subs[1][0];

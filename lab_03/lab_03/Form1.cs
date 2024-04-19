@@ -91,6 +91,8 @@ namespace lab_03
             if (rc == 0)
             {
                 double u = Interpolation.Interpolate(Interpolation.x_enter, Interpolation.y_enter, Interpolation.z_enter);
+                if (Interpolation.func(Interpolation.x_enter, Interpolation.y_enter, Interpolation.z_enter) < 0 && u > 0)
+                    u = -u;
                 u_label.Text = $"u = f(x, y, z) = {u:F8}";
             }
             
